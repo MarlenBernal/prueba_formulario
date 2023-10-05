@@ -1,78 +1,90 @@
+<?php 
+ob_start();
+    session_start();
+    $salida="";
+        $varSesion=$_SESSION["usuario"];
+        if ($varSesion==''|| $varSesion==null) {
+            header("location:index.html");
+        }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orden_servicio</title>
     <link rel="stylesheet" href="css/orden_servicio.css">
 </head>
+
 <body>
     <form class="formulario">
         <div class="n0_orden">
             <label for="num_orden">Numero de orden de servicio</label>
-            <input id='num_orden'name='num_orden'>
+            <input id='num_orden' name='num_orden'>
         </div>
         <div>
             <label for="fecha">Fecha y Hora</label>
-            <input type="date" id='fecha'name='fecha'>
+            <input type="date" id='fecha' name='fecha'>
         </div>
         <div>
-            <input type="checkbox" id="vigente"name='vigente'>
+            <input type="checkbox" id="vigente" name='vigente'>
             <label for="vigente">Vigente</label>
         </div>
         <div>
             <label type="number" for="sucursal">Sucursal</label>
-             <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-             </select>
-        </div>
-        <div>
-            <label type="number" for="cliente">Cliente</label>
-             <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-             </select>
-        </div>
-        <div>
-            <label for="razon_social">Razon Social</label>
-            <input id='razon_social'name='razon_social'>
-        </div>
-        <div>
-            <label for="direccion">Direccion</label>
-            <input id='direccion'name='direccion'>
-        </div>
-        <div>
-            <label for="correo">Correo electronico</label>
-            <input id='correo'name='correo'>
-        </div>
-        <div>
-            <label for="telefono">Telefono</label>
-            <input id='telefono'name='telefono'>
-        </div>
-        <div>
-            <input type="checkbox" id="vigente"name='vigente'>
-            <label for="vigente">Reprecentante</label>
-            <label type="number" for="cliente">Cliente</label>
             <select>
-               <option value="">Selecciona una opcion</option>
-               <option value="">1</option>
-               <option value="">2</option>
-               <option value="">3</option>
-               <option value="">4</option>
+                <option value="">Selecciona una opcion</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
             </select>
         </div>
         <div>
-            <input type="checkbox" id="vigente"name='vigente'>
+            <label type="number" for="cliente">Cliente</label>
+            <select>
+                <option value="">Selecciona una opcion</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+        </div>
+        <div>
+            <label for="razon_social">Razon Social</label>
+            <input id='razon_social' name='razon_social'>
+        </div>
+        <div>
+            <label for="direccion">Direccion</label>
+            <input id='direccion' name='direccion'>
+        </div>
+        <div>
+            <label for="correo">Correo electronico</label>
+            <input id='correo' name='correo'>
+        </div>
+        <div>
+            <label for="telefono">Telefono</label>
+            <input id='telefono' name='telefono'>
+        </div>
+        <div>
+            <input type="checkbox" id="vigente" name='vigente'>
+            <label for="vigente">Reprecentante</label>
+            <label type="number" for="cliente">Cliente</label>
+            <select>
+                <option value="">Selecciona una opcion</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="vigente" name='vigente'>
             <label for="vigente">Si los datos del interesado,son distintos de los del cliente,llenar abajo</label>
         </div>
-        
+
         <div class="container">
             <table>
                 <thead>
@@ -153,13 +165,13 @@
         </div>
         <div>
             <label type="number" for="cliente">Registrado por:</label>
-             <select>
+            <select>
                 <option value="">Selecciona una opcion</option>
                 <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
                 <option value="">4</option>
-             </select>
+            </select>
         </div>
         <div class="wrapper">
             <button> Guardar</button>
@@ -172,4 +184,7 @@
         </div>
     </form>
 </body>
+
 </html>
+
+<?php  } ?>
