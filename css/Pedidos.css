@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #323D40;
+}
+
+.Titulo_Contenedor{
+    width: 100;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.411)),url("../img/Diseño.jpg")no-repeat;
+    background-size:cover ;
+    background-position: center;
+    color: #f6f6f6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    place-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+}
+
+.Titulo_Texto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.Titulo_Texto img{
+    width: 200px;
+}
+
+.Texto_Logo h1{
+    font-size: 3em;
+    color: #80F2E7;
+}
+
+.Titulo_Descripcion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.Titlo_H1{
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.Titlo_H1 h1{
+    font-size: 2em;
+}
+
+.Titulo_Descripcion p{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.H1_Pedidos{
+    color: #80F2E7;
+}

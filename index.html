@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <Section class="Contenedor">
+        <Section class="Login" id="Login">
+            <div class="Login_Contenedor">
+                <form class="Login_Form" id="Login_Form">
+                    <h1>Iniciar Sesion</h1>
+                    <div class="Form_Dato">
+                        <input type="text" required="" autocomplete="off" id="Correo">
+                        <label>Correo</label> 
+                    </div>
+                    <div class="Form_Dato">
+                        <input type="password" required="" autocomplete="off" id="Contraseña">
+                        <label>Contraseña</label><button type="button" class="eye" onclick="mostrarContraseña()" id="Ver_Pass"><img id="Img_eye" src="img/eye.png" alt=""></button>
+                    </div>
+                    
+                    <input class="Form_Boton" type="submit" value="Iniciar Secion" id="Enviar">
+                </form>
+                <div class="Login_Info">
+                    <img src="img/LumarLogo.png" alt="">
+                    <div class="Info_Texto">
+                        <h1>Bienvenido</h1>
+                        <h2>Información o eslogan</h2>
+                        <h5>¿No tienes Cuenta?</h5>
+                        <input class="Info_registro" type="button" value="Registrarse" onclick="Cambio()">
+                    </div>
+                </div>
+            </div>
+        </Section>
+    
+        <section class="Registro" id="Registro">
+            <div class="Registro_Contenedor">
+                <form class="Registro_Form" id="Registro_Form">
+                    <h1>Registrarse</h1>
+                    <div class="Dual">
+                        <div class="Form_Dato">
+                            <input type="text" required="" autocomplete="off" id="RNombre">
+                            <label>Nombre/s</label> 
+                        </div>
+                        <div class="Form_Dato">
+                            <input type="text" required="" autocomplete="off" id="RApellido">
+                            <label>Apellidos</label>
+                        </div>
+                    </div>
+                    <div class="Dual">
+                        <div class="Form_Dato">
+                            <input type="text" required="" autocomplete="off" id="RTelefono">
+                            <label>Telefono</label>
+                        </div>
+                        <div class="Form_Dato">
+                            <input type="text" required="" autocomplete="off" id="RCorreo">
+                            <label>Correo</label>
+                        </div>
+                    </div>
+                    <div class="Dual">
+                        <div class="Form_Dato">
+                            <input type="password" required="" autocomplete="off" id="Contraseña1">
+                            <label>Contraseña</label><button type="button" class="eye" onclick="mostrarContraseña1()" id="Ver_Pass"><img id="Img_eye1" src="img/eye.png" alt=""></button>
+                        </div>
+                        <div class="Form_Dato">
+                            <input type="password" required="" autocomplete="off" id="Contraseña2">
+                            <label>Confirma Contraseña</label><button type="button" class="eye" onclick="mostrarContraseña2()" id="Ver_Pass"><img id="Img_eye2" src="img/eye.png" alt=""></button>
+                        </div>
+                        <label id="mensaje"></label>
+                    </div> 
+                    <input class="Form_Boton Registro_bt" type="submit" value="Registarce" id="Registar">
+                </form>
+                <div class="Login_Info">
+                    <img src="img/LumarLogo.png" alt="">
+                    <div class="Info_Texto">
+                        <h1>Bienvenido</h1>
+                        <h2>Información o eslogan</h2>
+                        <h5>¿Ya tienes Cuenta?</h5>
+                        <input class="Info_registro" type="button" value="Iniciar Sesión"  onclick="Cambio2()">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </Section>
+    <script src="js/Inicio_Sesion.js"></script>
+    <script src="js/Cambiar-Reg-Ini.js"></script>
+    <script src="js/Valida_Contraseña.js"></script>
+    <script src="js/Registar-Usuario.js"></script>
+    <script src="js/Caracteres.js"></script>
+</body>
+</html>
