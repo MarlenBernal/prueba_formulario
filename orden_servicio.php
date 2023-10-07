@@ -7,184 +7,114 @@ ob_start();
             header("location:index.html");
         }else{
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orden_servicio</title>
     <link rel="stylesheet" href="css/orden_servicio.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
-
 <body>
-    <form class="formulario">
-        <div class="n0_orden">
-            <label for="num_orden">Numero de orden de servicio</label>
-            <input id='num_orden' name='num_orden'>
-        </div>
-        <div>
-            <label for="fecha">Fecha y Hora</label>
-            <input type="date" id='fecha' name='fecha'>
-        </div>
-        <div>
-            <input type="checkbox" id="vigente" name='vigente'>
-            <label for="vigente">Vigente</label>
-        </div>
-        <div>
-            <label type="number" for="sucursal">Sucursal</label>
-            <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-            </select>
-        </div>
-        <div>
-            <label type="number" for="cliente">Cliente</label>
-            <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-            </select>
-        </div>
-        <div>
-            <label for="razon_social">Razon Social</label>
-            <input id='razon_social' name='razon_social'>
-        </div>
-        <div>
-            <label for="direccion">Direccion</label>
-            <input id='direccion' name='direccion'>
-        </div>
-        <div>
-            <label for="correo">Correo electronico</label>
-            <input id='correo' name='correo'>
-        </div>
-        <div>
-            <label for="telefono">Telefono</label>
-            <input id='telefono' name='telefono'>
-        </div>
-        <div>
-            <input type="checkbox" id="vigente" name='vigente'>
-            <label for="vigente">Reprecentante</label>
-            <label type="number" for="cliente">Cliente</label>
-            <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-            </select>
-        </div>
-        <div>
-            <input type="checkbox" id="vigente" name='vigente'>
-            <label for="vigente">Si los datos del interesado,son distintos de los del cliente,llenar abajo</label>
-        </div>
+    
+    <section class="Orden">
+        <div class="Orden_Contenedor">
+            <form class="Orden_Form" action="" method="post" autocomplete="off" id="Form_Orden">
+                <?php
+                include "php/conexion.php";
 
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ACT</th>
-                        <th>ORD</th>
-                        <th>VER</th>
-                        <th>FIR</th>
-                        <th>CAP</th>
-                        <th>MUESTRA</th>
-                        <th>ESTATUS</th>
-                        <th>F.MUESTRA</th>
-                        <th>CADUCIDAD</th>
-                        <th>CANT</th>
-                        <th>LOTE</th>
-                        <th>ENVIO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                </tbody>
-            </table>
+                $d1="0";
+                $d2=23000000;
+                $d3="SELECT MAX(idordentrabajo) idordentrabajo  From ordenservicio";
+                $res=pg_query($conexion,$d3);
+                $srt=pg_fetch_assoc($res);
+                $suma= $d1.$srt['idordentrabajo']+$d2+1;
+                ?>
+                <h1>Nueva Orden de Servicio</h1>
+                <div class="Orden_Grupo">
+                    <div class="Orden_Dato">
+                        <label>Numero de Orden de Servicio:</label>
+                        <input type="text" id="Buscar" value="<?php echo $suma?>">
+                    </div>
+                    <div class="Orden_Dato">
+                        <label>Fecha:</label>
+                        <input type="date" id="fecha">
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" checked>
+                        <label>Vigente</label>
+                    </div>
+                </div>
+                <div class="Orden_Dato">
+                    <label for="campo">Cliente:</label>
+			        <input type="text" name="cliente" id="campo">
+			        <ul id="lista"></ul>
+                </div>
+                <div class="Orden_Dato">
+                    <label>Razon Social:</label>
+                    <input type="text" id="razonsocial">
+                </div>
+                <div class="Orden_Dato">
+                    <label>Direccion:</label>
+                    <input type="text" name="direccion" id="campo_dic">
+                    <ul id="lista_cli"></ul>
+                </div>
+                <div class="Orden_Grupo">
+                    <div class="Orden_Dato">
+                        <label>Correo:</label>
+                        <input type="text" id="Correo">
+                        <ul id="lista_correo"></ul>
+                    </div>
+                    <div class="Orden_Dato">
+                        <label>Telefono:</label>
+                        <input type="text" id="telefono">
+                        <ul id="lista_tel"></ul>
+                    </div>
+                </div>
+                <div class="Orden_Dato_check">
+                    <div class="check">
+                        <input type="checkbox" id="Dato_check">
+                        <label>Representante:</label>
+                    </div>
+                    <select class="Select_Representante" id="Representante" name="representante" disabled></select>
+                </div>
+                <div class="Orden_analisis">
+                    <input type="button" value="Agregar Análisis" id="Enviar">
+                    <input type="button" value="Actualizar Tabla">
+                </div>
+                <div class="Orden_Tabla">
+                    <table class="Tabla_Orden">
+                        <tr>
+                            <th>Act</th>
+                            <th>Ord</th>
+                            <th>Ver</th>
+                            <th>Fir</th>
+                            <th>Cap</th>
+                            <th>Clave</th>
+                            <th>Muestra</th>
+                            <th>Estatus</th>
+                            <th>F.Muestra</th>
+                            <th>Caducidad</th>
+                            <th>Cant</th>
+                            <th>Lote</th>
+                            <th>Envio</th>
+                        </tr>
+                        <tbody id="Datos_Tabla"></tbody>
+                    </table>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
         </div>
-        <div>
-            <label type="number" for="cliente">Registrado por:</label>
-            <select>
-                <option value="">Selecciona una opcion</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-            </select>
-        </div>
-        <div class="wrapper">
-            <button> Guardar</button>
-        </div>
-        <div class="wrapper">
-            <button> Cancelar</button>
-        </div>
-        <div class="wrapper">
-            <button> Limpiar</button>
-        </div>
-    </form>
+    </section>
+
+    <script src="js/ordenservicio.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/Tabla.js"></script>
+    <script src="js/cliente_auto.js"></script>
+    <script src="js/representante.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/agregar_orden.js"></script>
 </body>
-
 </html>
-
 <?php  } ?>
