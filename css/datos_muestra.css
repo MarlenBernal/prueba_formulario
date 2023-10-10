@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.formu {
+  width: 700px;
+  background-color: rgb(203, 216, 212);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 35px;
+}
+.mensajer {
+  width: 60%;
+}
+.no_guia {
+  width: 100%;
+}
+.noguia {
+  width: 80%;
+}
+.urgen {
+  width: 100%;
+}
+.urg {
+  width: 25%;
+}
+.idiom {
+  width: 30%;
+}
+.mues {
+  width: 100%;
+}
+.muest {
+  width: 75%;
+}
+
+.canuni {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.fecha {
+  width: 100%;
+}
+.fechm {
+  width: 24%;
+}
+.feche {
+  width: 23%;
+}
+.fecha1 {
+  width: 100%;
+}
+.fechc {
+  width: 22%;
+}
+.fechem {
+  width: 21%;
+}
+.lotee {
+  width: 100%;
+}
+.lot {
+  width: 90%;
+}
+.itti {
+  width: 100%;
+  justify-content: space-between;
+}
+.ite {
+  width: 43%;
+}
+.ti {
+  width: 43%;
+}
+.proced {
+  width: 100%;
+}
+.proce {
+  width: 65%;
+}
+.nomb {
+  width: 100%;
+}
+.nom {
+  width: 87%;
+}
+
+.municip {
+  width: 100%;
+}
+.muni {
+  width: 78%;
+}
+.estad {
+  width: 100%;
+}
+.esta {
+  width: 35%;
+}
+.cp {
+  width: 34%;
+}
+.des_cliente {
+  width: 100%;
+}
+.desc_cliente {
+  width: 100%;
+}
+.otros_dat {
+  width: 100%;
+}
+.otros_dato {
+  width: 100%;
+}
+.motiv_cancel {
+  width: 100%;
+}
+.mot_cancel {
+  width: 100%;
+}
+.modific_can {
+  width: 100%;
+}
+.modific_fallo {
+  width: 100%;
+}

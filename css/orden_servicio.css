@@ -4,16 +4,27 @@
     box-sizing: border-box;
 
 }
+body{
+    margin: 0;
+    overflow: 100%;
+}
 .formulario{
-width:100%;
+width:700px;
+width: top;
 }
 .num_orden{
     width: 100px;
 }
-7
+.no_orden{
+    margin: 5px;
+}
+.fech{
+text-align: right;
+}
 .container{
-    font-family: helvetica;
-    background: #55aabd;
+    width: ;
+    background-color: aquamarine;
+    border-radius: 20px;
 }
 h2{
     text-align: center;
@@ -23,7 +34,7 @@ h2{
     color: rgb(104, 216, 179);
     padding: 30px 0;
 }
-.container{
+.tab{
     margin: 70px 70px 70px;
     box-shadow: 8px 35px 50px rgba(0,0,0,0.2);
 }
@@ -33,7 +44,7 @@ table{
     font-weight: normal;
     border: none;
     border-collapse: collapse;
-    width: 100%;
+    width: 300px;
     max-width: 100px;
     white-space: nowrap;
     background-color: rgb(127, 170, 255);

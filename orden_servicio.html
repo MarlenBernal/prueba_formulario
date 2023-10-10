@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="css/orden_servicio.css">
 </head>
 <body>
+    <div class="container">
     <form class="formulario">
-        <div class="n0_orden">
+        <div class="no_orden">
             <label for="num_orden">Numero de orden de servicio</label>
             <input id='num_orden'name='num_orden'>
         </div>
-        <div>
-            <label for="fecha">Fecha y Hora</label>
+        <div class="fech">
+            <label for="fecha">Fecha</label>
             <input type="date" id='fecha'name='fecha'>
         </div>
-        <div>
+        <div class="vig">
             <input type="checkbox" id="vigente"name='vigente'>
             <label for="vigente">Vigente</label>
         </div>
-        <div>
+        <div class="sucur">
             <label type="number" for="sucursal">Sucursal</label>
              <select>
                 <option value="">Selecciona una opcion</option>
@@ -30,7 +31,7 @@
                 <option value="">4</option>
              </select>
         </div>
-        <div>
+        <div class="clien">
             <label type="number" for="cliente">Cliente</label>
              <select>
                 <option value="">Selecciona una opcion</option>
@@ -40,11 +41,11 @@
                 <option value="">4</option>
              </select>
         </div>
-        <div>
+        <div class="razon_soci">
             <label for="razon_social">Razon Social</label>
             <input id='razon_social'name='razon_social'>
         </div>
-        <div>
+        <div class="direc">
             <label for="direccion">Direccion</label>
             <input id='direccion'name='direccion'>
         </div>
@@ -73,7 +74,7 @@
             <label for="vigente">Si los datos del interesado,son distintos de los del cliente,llenar abajo</label>
         </div>
         
-        <div class="container">
+        <div class="tab">
             <table>
                 <thead>
                     <tr>
@@ -170,6 +171,7 @@
         <div class="wrapper">
             <button> Limpiar</button>
         </div>
+    </div>
     </form>
 </body>
 </html>
