@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/analisis_solicitados.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <form class="formul">
+            <div class="dat1">
+                <label class="labor" for="lab">ANALISIS SOLICITADOS</label>
+            </div>
+
+            <div class="labora">
+                <table>
+                    <label for="labs">LABORATORIOS</label>
+                    <tr>
+                        <div class="fitos">
+                            <div>
+                                <input type="checkbox" name="fito" id="fito">
+                                <label for="fito">FITOSANITARIOS</label>
+                            </div>
+                            <input type="checkbox" class="fitosan" name="fit" id="fit">
+                        </div>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="clav">
+                <table>
+                    <tr>
+                        <th>*</th>
+                        <th>CLAVE</th>
+                        <th>ANALISIS</th>
+                        <th>NORMA</th>
+                        <th>UNIDAD</th>
+                        <th>LAB</th>
+                        <th>PAS</th>
+                        <th>EXT</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <button>flecha</button>
+                <label for="usuar">USUARIO DE MUESTRA</label>
+            </div>
+
+            <div>
+                <label for="registrado">REGISTRADO POR:</label>
+                <label for="regi" id="regi" class="regist" name="regi">
+                    <select name="regi" class="reg" id="regi">
+                        <option value="">SELECCIONA UNA OPCION</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </label>
+                <button>ACEPTAR</button>
+                <button>CANCELAR</button>
+                <button>LIMPIAR</button>
+                <label for="">REGISTRO</label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
