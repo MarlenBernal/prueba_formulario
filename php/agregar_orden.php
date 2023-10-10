@@ -20,12 +20,25 @@ $res=pg_query($conexion,$d3);
 $srt=pg_fetch_assoc($res);
 $suma=$srt['idordentrabajo']+1;
 
-$representante = $_POST['representante'];
+$comprobar = "SELECT * FROM public.ordenservicio where ordentrabajo = '$orden'";
+$ComResultado= pg_query($conexion,$comprobar);
+$numrow=pg_num_rows($ComResultado);
 
-$agregarorden="INSERT INTO public.ordenservicio(
-	ordentrabajo, idordentrabajo, noversion, nacional, idcliente, internacional,fecharegistro,horaregistro,estaactivo,nomcliente,dircliente,emacliente,telcliente)
-	VALUES ('$orden', '$suma', 1, 1,'$n4' , 0,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1,'$razon','$direccion','$correo','$telefono');";
-$respuesta=pg_query($conexion,$agregarorden);
+$representante=$_POST['representante'];
+$r1="SELECT idversion FROM representante where idrepresentante = '$representante'";
+$r2=pg_query($conexion,$r1);
+$r3=pg_fetch_assoc($r2);
+$r4=$r3['idversion'];
+
+if($numrow!=1){
+	$agregarorden="INSERT INTO public.ordenservicio(
+		ordentrabajo, idordentrabajo, noversion, nacional, idcliente, internacional,fecharegistro,horaregistro,estaactivo,nomcliente,dircliente,emacliente,telcliente,ridrepresentante,ridversion)
+		VALUES ('$orden', '$suma', 1, 1,'$n4' , 0,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1,'$razon','$direccion','$correo','$telefono','$representante','$r4');";
+	$respuesta=pg_query($conexion,$agregarorden);
+	echo 1;
+}else if($numrow==1){
+	echo 2;
+}
 
 
 

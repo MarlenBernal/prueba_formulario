@@ -5,7 +5,7 @@ require 'conexion.php';
 
 $campo = $_POST["campo"];
 
-$sql = "SELECT * FROM public.cliente where razonsocial ILIKE '%$campo%' LIMIT 10 ";
+$sql = "SELECT MAX(idversion) version_direc,domicilio FROM public.cliente where razonsocial ILIKE '%$campo%' GROUP BY domicilio  LIMIT 10 ";
 $query = pg_query($conexion,$sql);
 
 $html = "";

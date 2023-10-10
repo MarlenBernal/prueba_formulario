@@ -35,14 +35,14 @@ ob_start();
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Numero de Orden de Servicio:</label>
-                        <input type="text" id="Buscar" value="<?php echo $suma?>">
+                        <input type="text" id="Buscar" value="<?php echo $suma?>" disabled>
                     </div>
                     <div class="Orden_Dato">
                         <label>Fecha:</label>
-                        <input type="date" id="fecha">
+                        <input type="date" id="fecha" disabled>
                     </div>
                     <div class="check">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked disabled>
                         <label>Vigente</label>
                     </div>
                 </div>
