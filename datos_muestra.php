@@ -16,18 +16,16 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texcoco datos de la muestra</title>
     <link rel="stylesheet" href="css/datos_muestra.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <form class="formu">
+        <form class="formu" id="Formulario_Muetra">
             <div class="men">
-                <input type="checkbox" name="mensaje" id="check_mensajeria">
+                <input type="checkbox" value="1" name="checkmensaje" id="check_mensajeria">
                 <label for="mensaje">MENSAJERIA</label>
-                <select class="mensajer" id="mensajeria" disabled></select>
-                <button class="boton1">buscar</button>
-                <button class="boton2">nuevo</button>
-                <script src="js/jquery-3.2.1.min.js"></script>
+                <select class="mensajer" name="mensajeria" id="mensajeria" disabled></select>
             </div>
 
             <div class="no_guia">
@@ -40,19 +38,16 @@ ob_start();
                 <label type="number" class="urgencia" for="urgen">
                     <select name="urgen" id="urgen" class="urg"></select>
                 </label>
-                <button class="boton3">buscar</button>
-                <button class="boton4">nuevo</button>
                 <label for="idioma">IDIOMA:</label>
                 <label for="idioma" type="number">
-                    <select name="idioma" class="idiom" id="idioma">
-                    </select>
+                    <select name="idioma" class="idiom" id="idioma"></select>
                 </label>
             </div>
 
             <div class="mues">
                 <label for="muestra">MUESTRA:</label>
-                <div name="muestra" class="mues_busca" id="muestra">
-                    <input class="muest" type="text" name="cliente" id="campo">
+                <div class="mues_busca" id="muestra">
+                    <input class="muest" type="text" name="muestra" id="campo">
                     <ul id="lista"></ul>
                 </div>
                 <input type="button" value="Nuevo">
@@ -63,38 +58,36 @@ ob_start();
                 <input id="cantidad" type="text" name="cantidad" class="cant">
                 <label for="unidad">UNIDAD</label>
                 <label for="unidad" type="number" class="cant">
-                    <input type="text" name="direccion" id="campo_dic">
+                    <input type="text" name="unidad" id="campo_dic">
                     <ul id="lista_cli"></ul>
                 </label>
-                <button class="boton7">buscar</button>
-                <button class="boton8">nuevo</button>
             </div>
 
             <div class="fecha">
                 <label for="fech_muestreo">FECHA DE MUESTREO:</label>
-                <input type="date" class="fechm">
+                <input type="date" class="fechm" id="Fecha_muetreo" name="Fecha_muetreo">
 
                 <label for="fech_envio">FERCHA DE ENVIO:</label>
-                <input type="date" class="feche">
+                <input type="date" class="feche"  name="fecha_envio">
             </div>
             <div class="fecha1">
                 <label for="fech_caducidad">FECHA DE CADUCIDAD:</label>
-                <input type="date" class="fechc">
+                <input type="date" class="fechc" name="fecha_caducidad">
 
                 <label for="fech_empaque">FECHA DE EMPAQUE:</label>
-                <input type="date" class="fechem">
+                <input type="date" class="fechem" name="fecha_empaque">
             </div>
             <div class="lotee">
                 <label for="lote">LOTE:</label>
-                <input type="text" class="lot">
+                <input type="text" class="lot" name="lote">
             </div>
 
             <div class="itti">
                 <label for="item">ITEM:</label>
-                <input type="text" class="ite">
+                <input type="text" class="ite" name="ittem">
 
                 <label for="tif">TIF</label>
-                <input type="text" class="ti">
+                <input type="text" class="ti" name="tif">
             </div>
 
             <div>
@@ -104,51 +97,39 @@ ob_start();
             <div class="proced">
                 <label for="procedencia">PROCEDENCIA:</label>
                 <label type="number">
-                    <input type="text" class="proce" name="direccion" id="campo_Proce">
+                    <input type="text" class="proce" name="procedencia" id="campo_Proce">
                     <ul id="lista_proce"></ul>
                 </label>
-                <button>buscar</button>
-                <button>enviar</button>
             </div>
 
             <div class="nomb">
                 <label for="nombre">NOMBRE:</label>
-                <input type="text" class="nom">
+                <input type="text" class="nom" name="nombre_procedencia">
             </div>
 
             <div class="municip">
                 <label for="municipio">MUNICIPIO</label>
                 <label type="text" >
                     <input type= text name="municipio" class="muni" id="municipio">
-                    <button>buscar</button>
                 </label>
             </div>
 
             <div class="estad">
                 <label for="estado">ESTADO</label>
                 <label type="number">
-                    <select name="estado" class="esta" id="estado">
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>buscar</button>
+                    <input type="text"  name="estado" id="campo_esta">
+                    <ul id="listaProce"></ul>
                 </label>
                 <label for="cop">C.P.</label>
                 <label type="number">
-                    <select name="cop" class="cp" id="cop">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                    <button>buscar</button>
+                    <input type="text" name="cp" id="campo_codigo">
+                    <ul id="listaCodigo"></ul>
                 </label>
             </div>
 
             <div class="des_cliente">
                 <label for="descrip_cliente">DESCRIPCION DEL CLIENTE</label>
-                <input type="text" class="desc_cliente">
+                <input type="text" class="desc_cliente" name="descripcion_cliente">
             </div>
 
             <div class="otros_dat">
@@ -158,12 +139,12 @@ ob_start();
 
             <div class="motiv_cancel">
                 <label for="motiv_cancel">MOTIVO DE CANCELACION</label>
-                <input type="text" class="mot_cancel" disabled>
+                <input type="text" class="mot_cancel" name="motivo_cancelacion" disabled>
             </div>
 
             <div class="modific_can">
                 <label for="modific">MODIFICACION O FALLO</label>
-                <input type="text" class="modific_fallo" disabled>
+                <input type="text" class="modific_fallo" name="modificacion" disabled>
             </div>
             <div>
                 <label for="regis_por">REGISTRADO POR</label>
@@ -173,7 +154,7 @@ ob_start();
                         <option value="">1</option>
                         <option value="">2</option>
                     </select>
-                    <button>ACEPTAR</button>
+                    <input type="submit" onclick="registrar_muestra();" value="Registar Muestra">
                     <button>CANCELAR</button>
                     <button>LIMPIAR</button>
                     <LABEL>REGISTRO</LABEL>
@@ -188,4 +169,9 @@ ob_start();
 <script src="jsMuestra/mensajeria.js"></script>
 <script src="jsMuestra/muestras.js"></script>
 <script src="jsMuestra/Procedencia.js"></script>
+<script src="jsMuestra/estado_muestra.js"></script>
+<script src="jsMuestra/Codigopostal.js"></script>
+<script src="jsMuestra/Carcteres.js"></script>
+<script src="jsMuestra/Orden_Muetra.js"></script>
+
 <?php  } ?>
