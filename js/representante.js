@@ -1,3 +1,4 @@
+
 $(buscar_Tipo());
 
 function buscar_Tipo(consulta){
@@ -18,3 +19,4 @@ var select = document.getElementById('Representante');
 checkbox.addEventListener('change', function() {
     select.disabled = !checkbox.checked;
 });
+

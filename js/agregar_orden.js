@@ -14,6 +14,7 @@ $(document).ready(function(){
                 if(res==1){
                     alert ("Orden Realizada");
                     $('#Form_Orden')[0].reset();
+                    window.location.href="datos_muestra.php";
                 }else if(res==2){
                     alert("Orden de ya existe");
                 }else{

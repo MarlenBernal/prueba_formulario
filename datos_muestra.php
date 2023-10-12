@@ -1,3 +1,13 @@
+<?php 
+ob_start();
+    session_start();
+    $salida="";
+        $varSesion=$_SESSION["usuario"];
+        if ($varSesion==''|| $varSesion==null) {
+            header("location:index.html");
+        }else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,60 +15,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texcoco datos de la muestra</title>
-    <link rel="stylesheet" href="/css/datos_muestra.css">
+    <link rel="stylesheet" href="css/datos_muestra.css">
 </head>
 
 <body>
     <div class="container">
         <form class="formu">
             <div class="men">
-                <input type="checkbox" name="mensaje" id="mensaje">
+                <input type="checkbox" name="mensaje" id="check_mensajeria">
                 <label for="mensaje">MENSAJERIA</label>
-                <input type="text" class="mensajer">
+                <select class="mensajer" id="mensajeria" disabled></select>
                 <button class="boton1">buscar</button>
                 <button class="boton2">nuevo</button>
+                <script src="js/jquery-3.2.1.min.js"></script>
             </div>
 
             <div class="no_guia">
                 <label for="guias">No.DE GUIA(S):</label>
-                <input id="guias" name="guias" class=noguia type="text">
+                <input  name="guias" class=noguia type="text" id="guias" disabled>
             </div>
 
             <div class="urgen">
                 <label for="urgencia">URGENCIA:</label>
-                <label for="urg"></label>
                 <label type="number" class="urgencia" for="urgen">
-                    <select name="urgen" id="urgen" class="urg">
-                        <option value="">selelcciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                    </select>
+                    <select name="urgen" id="urgen" class="urg"></select>
                 </label>
                 <button class="boton3">buscar</button>
                 <button class="boton4">nuevo</button>
                 <label for="idioma">IDIOMA:</label>
                 <label for="idioma" type="number">
                     <select name="idioma" class="idiom" id="idioma">
-                        <option value="">selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
                     </select>
                 </label>
             </div>
 
             <div class="mues">
                 <label for="muestra">MUESTRA:</label>
-                <label for="muestra" type="number">
-                    <select name="muestra" class="muest" id="muestra">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                </label>
-                <button class="boton6">nuevo</button>
+                <div name="muestra" class="mues_busca" id="muestra">
+                    <input class="muest" type="text" name="cliente" id="campo">
+                    <ul id="lista"></ul>
+                </div>
+                <input type="button" value="Nuevo">
             </div>
 
             <div class="canuni">
@@ -66,12 +63,8 @@
                 <input id="cantidad" type="text" name="cantidad" class="cant">
                 <label for="unidad">UNIDAD</label>
                 <label for="unidad" type="number" class="cant">
-                    <select name="unidad" class="unid" id="unidad">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
+                    <input type="text" name="direccion" id="campo_dic">
+                    <ul id="lista_cli"></ul>
                 </label>
                 <button class="boton7">buscar</button>
                 <button class="boton8">nuevo</button>
@@ -79,17 +72,17 @@
 
             <div class="fecha">
                 <label for="fech_muestreo">FECHA DE MUESTREO:</label>
-                <input type="text" class="fechm">
+                <input type="date" class="fechm">
 
                 <label for="fech_envio">FERCHA DE ENVIO:</label>
-                <input type="text" class="feche">
+                <input type="date" class="feche">
             </div>
             <div class="fecha1">
                 <label for="fech_caducidad">FECHA DE CADUCIDAD:</label>
-                <input type="text" class="fechc">
+                <input type="date" class="fechc">
 
                 <label for="fech_empaque">FECHA DE EMPAQUE:</label>
-                <input type="text" class="fechem">
+                <input type="date" class="fechem">
             </div>
             <div class="lotee">
                 <label for="lote">LOTE:</label>
@@ -105,20 +98,17 @@
             </div>
 
             <div>
-                <button>flecha</button>
                 <label for="proced_muestra">PROCEDENCIA DE LA MUESTRA</label>
             </div>
 
             <div class="proced">
                 <label for="procedencia">PROCEDENCIA:</label>
                 <label type="number">
-                    <select name="procedencia" class="proce" id="procedencia">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>buscar</button>
-                    <button>enviar</button>
+                    <input type="text" class="proce" name="direccion" id="campo_Proce">
+                    <ul id="lista_proce"></ul>
+                </label>
+                <button>buscar</button>
+                <button>enviar</button>
             </div>
 
             <div class="nomb">
@@ -128,13 +118,10 @@
 
             <div class="municip">
                 <label for="municipio">MUNICIPIO</label>
-                <label type="text">
-                    <select name="municipio" class="muni" id="municipio">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
+                <label type="text" >
+                    <input type= text name="municipio" class="muni" id="municipio">
                     <button>buscar</button>
+                </label>
             </div>
 
             <div class="estad">
@@ -165,24 +152,18 @@
             </div>
 
             <div class="otros_dat">
-                <button>flecha</button>
                 <label for="otros_datos">OTROS DATOS</label>
                 <input for="otros_datos" class="otros_dato" type="text" name="otros_datos">
             </div>
 
             <div class="motiv_cancel">
                 <label for="motiv_cancel">MOTIVO DE CANCELACION</label>
-                <input type="text" class="mot_cancel">
+                <input type="text" class="mot_cancel" disabled>
             </div>
 
             <div class="modific_can">
                 <label for="modific">MODIFICACION O FALLO</label>
-                <input type="text" class="modific_fallo">
-            </div>
-
-            <div>
-                <button>flecha</button>
-                <label for="usu_muest">USUARIO DE MUESTRA</label>
+                <input type="text" class="modific_fallo" disabled>
             </div>
             <div>
                 <label for="regis_por">REGISTRADO POR</label>
@@ -203,3 +184,8 @@
 </body>
 
 </html>
+
+<script src="jsMuestra/mensajeria.js"></script>
+<script src="jsMuestra/muestras.js"></script>
+<script src="jsMuestra/Procedencia.js"></script>
+<?php  } ?>
