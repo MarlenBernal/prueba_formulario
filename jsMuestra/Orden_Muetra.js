@@ -11,7 +11,8 @@ function registrar_muestra(){
                 
             },
             success: function(response) {
-                alert (response);
+                alert ('Muestra Registrada');
+                window.location.replace("orden_servicio.php");
             },
             error:function(response){
                 alert(response);

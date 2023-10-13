@@ -33,5 +33,19 @@ const inputFecha = document.getElementById("Fecha_muetreo");
 inputFecha.max = obtenerFechaActual();
 
 
+//==Codigo postal=======================================
+var inputNumero = document.getElementById("campo_codigo");
+inputNumero.addEventListener("input", function () {
+  var valor = inputNumero.value;
+  valor = valor.replace(/[^0-9]/g, "");
+  if (valor.length > 10) {
+    valor = valor.slice(0, 10);
+  }
+
+  inputNumero.value = valor;
+
+});
+
+
 
 

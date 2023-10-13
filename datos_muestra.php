@@ -22,6 +22,7 @@ ob_start();
 <body>
     <div class="container">
         <form class="formu" id="Formulario_Muetra">
+            <h1>Datos de Muestra</h1>
             <div class="men">
                 <input type="checkbox" value="1" name="checkmensaje" id="check_mensajeria">
                 <label for="mensaje">MENSAJERIA</label>
@@ -147,18 +148,7 @@ ob_start();
                 <input type="text" class="modific_fallo" name="modificacion" disabled>
             </div>
             <div>
-                <label for="regis_por">REGISTRADO POR</label>
-                <label type="number">
-                    <select name="regis_por" class="regis" id="regis_por">
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <input type="submit" onclick="registrar_muestra();" value="Registar Muestra">
-                    <button>CANCELAR</button>
-                    <button>LIMPIAR</button>
-                    <LABEL>REGISTRO</LABEL>
-                </label>
+                <input type="submit" onclick="registrar_muestra();" value="Registar Muestra">
             </div>
         </form>
     </div>
