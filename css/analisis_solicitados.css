@@ -24,8 +24,14 @@ body {
 }
 .dat1 {
   width: 100%;
-  background-color: rgb(201, 201, 206);
+  background-color: rgb(132, 10, 101);
   text-align: center;
+  color: rgb(252, 251, 251);
+}
+.labo{
+  width: 100%;
+  background-color: rgb(132, 10, 101);
+  color: rgb(252, 251, 251);
 }
 .fitos {
   width: 100%;
@@ -54,12 +60,75 @@ body {
 }
 .clav{
   width: 100%;
-  background-color: blue;
+  background-color:rgb(132, 10, 101);
   text-align: center;
+  color: rgb(252, 251, 251);
 }
 
-.id_ident{
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton {
+  /* Config start */
+  --plus_sideLength: 1rem;
+  --plus_topRightTriangleSideLength: 0.4rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+}
+
+.plusButton:hover::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton>.plusIcon {
+  fill: white;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+
+.bot_usuari{
   width: 100%;
-  background-color: blue;
-  text-align: center;
+  display: flex;
 }

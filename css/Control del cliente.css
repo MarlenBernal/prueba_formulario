@@ -24,8 +24,9 @@ body {
 }
 .dat2 {
   width: 100%;
-  background-color: rgb(201, 201, 206);
+  background-color: rgb(132, 10, 101);
   text-align: center;
+  color: white;
 }
 .tab1{
   width: 100%;
@@ -33,12 +34,90 @@ body {
 }
 .id_ident{
   width: 100%;
-  background-color: blue;
+  background-color: rgb(132, 10, 101);
   text-align: center;
+  color: white;
 }
 .tabla1{
   width: 100px;
   text-align: center;
   display: flex;
   
+}
+.control1{
+  width: 70%;
+  background-color:rgb(132, 10, 101);
+  color: white;
+}
+
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton {
+  /* Config start */
+  --plus_sideLength: 1rem;
+  --plus_topRightTriangleSideLength: 0.4rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+}
+
+.plusButton:hover::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton>.plusIcon {
+  fill: white;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+.bot_usuari{
+  width: 100%;
+  display: flex;
+}
+.reg_sel{
+  width: 100%;
+  display: flex;
+  gap: 3px;
 }

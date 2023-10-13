@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Analisis solicitados</title>
     <link rel="stylesheet" href="css/analisis_solicitados.css">
 </head>
 
@@ -17,10 +17,12 @@
 
             <div class="labora">
                 <table>
-                    <label for="labs">LABORATORIOS</label>
+                    <div class="labo">
+                        <label for="labs">LABORATORIOS</label>
+                    </div>
                     <tr>
                         <div class="fitos">
-                            <div>
+                            <div class="">
                                 <input type="checkbox" name="fito" id="fito">
                                 <label for="fito">FITOSANITARIOS</label>
                             </div>
@@ -45,9 +47,17 @@
                 </table>
             </div>
 
-            <div>
-                <button>flecha</button>
-                <label for="usuar">USUARIO DE MUESTRA</label>
+            <div class="bot_usuari">
+                <div tabindex="0" class="plusButton">
+                    <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                        <g mask="url(#mask0_21_345)">
+                            <path
+                                d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <label for="usu">USUARIO DE MUESTRA</label>
             </div>
 
             <div>
@@ -60,6 +70,7 @@
                         <option value="">3</option>
                     </select>
                 </label>
+
                 <button>ACEPTAR</button>
                 <button>CANCELAR</button>
                 <button>LIMPIAR</button>
