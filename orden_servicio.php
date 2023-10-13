@@ -1,12 +1,4 @@
-<?php 
-ob_start();
-    session_start();
-    $salida="";
-        $varSesion=$_SESSION["usuario"];
-        if ($varSesion==''|| $varSesion==null) {
-            header("location:index.html");
-        }else{
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,4 +108,3 @@ ob_start();
     <script src="js/agregar_orden.js"></script>
 </body>
 </html>
-<?php  } ?>

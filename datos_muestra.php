@@ -1,12 +1,3 @@
-<?php 
-ob_start();
-    session_start();
-    $salida="";
-        $varSesion=$_SESSION["usuario"];
-        if ($varSesion==''|| $varSesion==null) {
-            header("location:index.html");
-        }else{
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +59,7 @@ ob_start();
                 <label for="fech_muestreo">FECHA DE MUESTREO:</label>
                 <input type="date" class="fechm" id="Fecha_muetreo" name="Fecha_muetreo">
 
-                <label for="fech_envio">FERCHA DE ENVIO:</label>
+                <label for="fech_envio">FECHA DE ENVIO:</label>
                 <input type="date" class="feche"  name="fecha_envio">
             </div>
             <div class="fecha1">
@@ -164,4 +155,3 @@ ob_start();
 <script src="jsMuestra/Carcteres.js"></script>
 <script src="jsMuestra/Orden_Muetra.js"></script>
 
-<?php  } ?>

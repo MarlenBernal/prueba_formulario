@@ -1,6 +1,26 @@
 $(document).ready(function(){
     $("#Enviar").click(function(){
         event.preventDefault();
+        
+        if ($('#Buscar').val() == "") {
+            alert("Agrega No orden");
+            return false;
+        } else if ($('#campo').val() == "") {
+            alert("Agrega Cliente");
+            return false;
+        }else if($('#razonsocial').val()==""){
+            alert("Agrega Razon social");
+            return false;
+        }else if ($('#campo_dic').val()==""){
+            alert("Agrega Direccion");
+            return false;
+        }else if($('#Correo')==""){
+            alert("Agrega Correo");
+            return false;
+        }else if($('#telefono')==""){
+            alert("Agrega Telefono");
+            return false;
+        }
 
         cadena="orden=" + $("#Buscar").val()+"&fecha="+$("#fecha").val()+"&cliente="+$("#campo").val()
         +"&razon="+$("#razonsocial").val()+"&direccion="+$("#campo_dic").val()+"&correo="+$("#Correo").val()
