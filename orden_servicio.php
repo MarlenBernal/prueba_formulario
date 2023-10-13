@@ -23,7 +23,6 @@ ob_start();
             <form class="Orden_Form" action="" method="post" autocomplete="off" id="Form_Orden">
                 <?php
                 include "php/conexion.php";
-
                 $d1="0";
                 $d2=23000000;
                 $d3="SELECT MAX(idordentrabajo) idordentrabajo  From ordenservicio";
@@ -35,7 +34,7 @@ ob_start();
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Numero de Orden de Servicio:</label>
-                        <input type="text" id="Buscar" value="<?php echo $suma?>" disabled>
+                        <input type="text" id="Buscar" value="<?php echo $suma ?>" disabled>
                     </div>
                     <div class="Orden_Dato">
                         <label>Fecha:</label>

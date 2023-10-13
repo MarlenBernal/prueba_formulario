@@ -11,7 +11,7 @@ $query = pg_query($conexion,$sql);
 $html = "";
 
 while ($row = pg_fetch_array($query)) {
-	$html .= "<li value=".$row["id_unidad"]." onclick=\"mostrare('" . $row["descripcion"] ." - ".$row["abreviatura"]. "')\">" . $row["descripcion"] ." - ".$row["abreviatura"]."</li>";
+	$html .= "<li value=".$row["id_unidad"]." onclick=\"mostrare('".$row["abreviatura"]. "')\">".$row["abreviatura"]."</li>";
 }
 
 echo json_encode($html, JSON_UNESCAPED_UNICODE);

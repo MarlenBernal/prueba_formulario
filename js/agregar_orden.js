@@ -12,9 +12,10 @@ $(document).ready(function(){
             data: cadena,
             success: function(res){
                 if(res==1){
+                    window.location.replace("datos_muestra.php");
                     alert ("Orden Realizada");
                     $('#Form_Orden')[0].reset();
-                    window.location.href="datos_muestra.php";
+                    
                 }else if(res==2){
                     alert("Orden de ya existe");
                 }else{
