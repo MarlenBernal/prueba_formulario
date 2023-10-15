@@ -25,7 +25,7 @@
                 <h1>Nueva Orden de Servicio</h1>
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
-                        <label>Numero de Orden de Servicio:</label>
+                        <label>Número de Orden de Servicio:</label>
                         <input type="text" id="Buscar" value="<?php echo $suma ?>" disabled>
                     </div>
                     <div class="Orden_Dato">
@@ -43,11 +43,11 @@
 			        <ul id="lista"></ul>
                 </div>
                 <div class="Orden_Dato">
-                    <label>Razon Social:</label>
+                    <label>Razón Social:</label>
                     <input type="text" id="razonsocial">
                 </div>
                 <div class="Orden_Dato">
-                    <label>Direccion:</label>
+                    <label>Dirección:</label>
                     <input type="text" name="direccion" id="campo_dic">
                     <ul id="lista_cli"></ul>
                 </div>
@@ -58,7 +58,7 @@
                         <ul id="lista_correo"></ul>
                     </div>
                     <div class="Orden_Dato">
-                        <label>Telefono:</label>
+                        <label>Teléfono:</label>
                         <input type="text" id="telefono">
                         <ul id="lista_tel"></ul>
                     </div>
@@ -89,7 +89,7 @@
                             <th>Caducidad</th>
                             <th>Cant</th>
                             <th>Lote</th>
-                            <th>Envio</th>
+                            <th>Envió</th>
                         </tr>
                         <tbody id="Datos_Tabla"></tbody>
                     </table>

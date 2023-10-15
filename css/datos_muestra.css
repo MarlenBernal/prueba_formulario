@@ -3,146 +3,237 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  overflow: 100%;
-}
-.container {
+
+.Formulario_Contenedor{
   width: 100%;
   height: 100vh;
   display: grid;
   place-items: center;
 }
-.formu {
+
+.Formulario_Muestra{
   width: 700px;
-  background-color: rgb(203, 216, 212);
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 35px;
+  background-color: rgb(203, 216, 212);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.mensajer {
-  width: 60%;
-}
-.no_guia {
+
+
+.div_autocompletar{
   width: 100%;
 }
-.noguia {
+
+/*================Mensajeria======================*/
+.Contenedor_Dato{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.Dato_Mensajeria{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dato_Mensajeria label{
+  width: 100px;
+}
+
+.Mensajeria_Select{
+  width: 100%;
+}
+
+.noguia{
+  width: 100%;
+}
+
+/*======================Urgencia====================*/
+
+.Contenedor_Urgencia{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.Dato_Uregencia{
+  width: 100%;
+  display: flex;
+}
+
+.Dato_Uregencia label{
+  width: 100px;
+}
+.Dato_Uregencia select{
+  width: 100%;
+}
+
+/*==================Muestra Doatos==================*/
+
+.Contenedor_Muetra{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Datos_Muestra{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.Datos_Muestra label{
+  width: 70px;
+}
+
+.Datos_Muestra input{
+  width: 100%;
+}
+
+/*==================Fechas==============================*/
+
+.Contenedor_Fechas{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Dato_Fechas{
+  display:flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.Dato_Fechas label{
   width: 80%;
 }
-.urgen {
+
+.Dato_Fechas input{
   width: 100%;
 }
-.urg {
-  width: 25%;
+
+/*=========================Lote=======================*/
+.Contenedor_lote{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.idiom {
-  width: 30%;
+
+.Contenedor_lote label{
+  width: 50px;
 }
-.mues {
+
+.Contenedor_lote input{
+  width: 100%;
+}
+
+/*==============Item Tif===============================*/
+.Contenedor_Item_Tif{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.Dato_Item_Tif{
+  width: 100%;
+  display: 	flex;
+  gap: 8px;
+}
+
+.Dato_Item_Tif label{
+  width: 50px;
+}
+
+.Dato_Item_Tif input{
+  width: 100%;
+}
+
+/*========================Procedencia muestra==============================*/
+.Procedencia_Muetra_Titulo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*==========================Procedencia de mestra============================*/
+
+.Contededor_Procedencia{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dato_Procedencia{
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.Dato_Procedencia label{
+  width: 100px;
+}
+
+.Dato_Procedencia input{
+  width: 100%;
+}
+
+.Estado_Dato{
   width: 100%;
   display: flex;
 }
-.mues_busca{
-  width: 100%;
+
+.Estado_Dato label{
+  width: 55px;
 }
 
-.muest {
-  width: 75%;
-}
+/*=====================Otros Datos===============*/
 
-.canuni {
+.Contenedor_Otros{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-.fecha {
-  width: 100%;
-}
-.fechm {
-  width: 24%;
-}
-.feche {
-  width: 23%;
-}
-.fecha1 {
-  width: 100%;
-}
-.fechc {
-  width: 22%;
-}
-.fechem {
-  width: 21%;
-}
-.lotee {
-  width: 100%;
-}
-.lot {
-  width: 90%;
-}
-.itti {
-  width: 100%;
-  justify-content: space-between;
-}
-.ite {
-  width: 43%;
-}
-.ti {
-  width: 43%;
-}
-.proced {
-  width: 100%;
-}
-.proce {
-  width: 65%;
-}
-.nomb {
-  width: 100%;
-}
-.nom {
-  width: 87%;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.municip {
+.Datos_Otros{
+  display: flex;
   width: 100%;
+  gap: 8px;
 }
-.muni {
-  width: 78%;
-}
-.estad {
-  width: 100%;
-}
-.esta {
+
+.Datos_Otros label{
   width: 35%;
 }
-.cp {
-  width: 34%;
-}
-.des_cliente {
+
+.Datos_Otros input{
   width: 100%;
 }
-.desc_cliente {
-  width: 100%;
-}
-.otros_dat {
-  width: 100%;
-}
-.otros_dato {
-  width: 100%;
-}
-.motiv_cancel {
-  width: 100%;
-}
-.mot_cancel {
-  width: 100%;
-}
-.modific_can {
-  width: 100%;
-}
-.modific_fallo {
-  width: 100%;
-}
+
+
 
 ul {
   list-style-type: none;
