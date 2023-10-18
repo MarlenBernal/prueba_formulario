@@ -1,145 +1,111 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+/*==================================header=============================*/
+.header{
+    width: 100%;
+    height: 50px;
+    background: #85c300 ;
+    position: fixed;
+    top: 0;
+}
 
-body{
+/*==================================Encabezado=============================*/
+
+.Encabezado{
     width: 100%;
     height: 100vh;
-    background: #323D40;
+    background: linear-gradient(#1b1b1ba2,#1b1b1b65),url("../img/laboratorio.webp")no-repeat;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    background-position:25%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#ffffff;
 }
 
-/*==============Primer Parte===========================================*/
-
-.Cabesera_Contenedor {
-    width: 100%;
-    height: 500px;
-    background: #fff url('../img/Diseño.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.Cabesera_Contenedor_Titulo {
+.Encabezado_Contenedor{
     width: 100%;
     height: 100%;
-    color: #80F2E7;
-    background-color: rgba(0, 0, 0, 0.678);
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.Encabezado_Logo{
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    top: 50px;
-}
-
-.Cabesera_Contenedor_Titulo img{
-    height: 70%;
-}
-
-.Cabesera_Contenedor_Titulo h1{
-    font-size: 3em;
-    font-family: 'Archivo Black', sans-serif;
-}
-
-.Cabesera_Contenedor_Titulo h3{
-    font-family: 'Archivo ', sans-serif;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    color: #f6f6f6;
 }
 
-/*==============Segunda Parte===========================================*/
-.Opciones_Contenedor {
-    width: 100%;
-    padding: 20px;
+.Encabezado_Logo img{
+    width: 50%;
 }
 
-.Opciones_Titulo{
-    width: 100%;
-    color: #80F2E7;
-    font-family: 'Archivo Black', sans-serif;
-    display: grid;
-    place-items: center;
-    font-size: 2em;
-    margin-bottom: 20px;
+.Encabezado_Logo h1{
+    font-size: 3rem;
 }
 
-.Opciones_Card {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    place-items: center;
-    gap:20px;
-}
-
-.Card {
+.Boton{
     width: 200px;
-    height: 350px;
+    height: 25px;
+    background-color: #85c300;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: 0.5s;
+    border: none;
+}
+
+.Boton:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 0px #1b1b1b;
+}
+
+.Boton:active{
+    transform: translateY(5px);
+}
+
+@media (max-width:970px){
+    .Encabezado_Logo img{
+        width: 90%;
+    }
+    .Encabezado_Logo h1{
+        font-size: 2rem;
+    }
+    .Boton{
+        width: 150px;
+        height: 25px;
+        font-size: 17px;
+    }
+}
+
+.Encabezado_Muestras{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #F2E8D5;
-    border-radius: 20px;
     text-align: center;
 }
 
-.Card h1{
-    color: #80F2E7;
-    font-family:'Archivo Black', sans-serif;
+.Encabezado_Muestras img{
+    width: 50%;
 }
 
-.Card p{
-    color: #f6f6f6;
+.Encabezado_Muestras h1{
+    font-size: 3rem;
 }
 
-.Card img{
-    width: 100%;
+@media (max-width:970px){
+    .Encabezado_Muestras h1{
+        font-size: 2rem;
+    }
 }
-
-.Card_Button{
-    width: 150px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: transparent;
-    color: #f6f6f6;
-    border: none;
-    font-family:'Archivo Black', sans-serif;
-    margin-top: 15px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.Card_Button:hover{
-    background-color: #80F2E7;
-    box-shadow: 2px 2px 3px #3a645c;
-    color: #323D40;
-    transform: translateY(-10px);
-}
-
-.Card1{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Pedidos.jpg') ;
-    background-size: cover;
-}
-.Card2{
-    background:linear-gradient(rgba(0, 0, 0, 0.568),rgba(0, 0, 0, 0.747)), url('../img/Lonas.jpg') ;
-    background-size: cover;
-}
-.Card3{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Productos.jpg') ;
-    background-size: cover;
-}
-.Card4{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Especial.jpg') ;
-    background-size: cover;
-}
-.Card5{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Digital.jpg') ;
-    background-size: cover;
-}
-.Card6{
-    background:linear-gradient(rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.40)), url('../img/Web.jpg') ;
-    background-size: cover;
-}
-
-

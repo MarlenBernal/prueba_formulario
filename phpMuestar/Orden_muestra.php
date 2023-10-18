@@ -1,17 +1,17 @@
 <?php
 require '../php/conexion.php';
+session_start();
 
 
-$dr1="0";
-$dr2=23000000;
-$dr3="SELECT MAX(idordentrabajo) idordentrabajo  From ordenservicio";
-$res=pg_query($conexion,$dr3);
-$srt=pg_fetch_assoc($res);
-$suma= $dr1.$srt['idordentrabajo']+$dr2;
-
+$suma= $_SESSION['ordentrabajo'];
 $ordencodigo=$suma;
-$idclaveidentificacion=1;
-$claveidentificacion=$suma."_".$idclaveidentificacion;
+
+$d3="SELECT MAX(idclaveidentificacion) idclaveidentificacion  From ordenserviciomuestra";
+$res=pg_query($conexion,$d3);
+$srt=pg_fetch_assoc($res);
+$idclave=$srt['idclaveidentificacion']+1;
+
+$claveidentificacion=$suma."_".$idclave;
 $mensajeria=$_POST['mensajeria'];
 $guia=$_POST['guias'];
 $urgencia=$_POST['urgen'];
@@ -71,8 +71,16 @@ $descripcion_cliente=$_POST['descripcion_cliente'];
 $otros_datos=$_POST['otros_datos'];
 $conmensajeria=$_POST['checkmensaje'];
 
-$Consulta="INSERT INTO ordenserviciomuestra(ordencodigo, ordenversion, claveidentificacion, idclaveidentificacion, noversion, estatus, idurgencia, disponible, conetiqueta, noetiqueta, nacional, internacional, idmuestra, fechamuestra, fechacaducidad, cantidad, lote, fechaenvio, conmensajeria, idmensajeria, noguia, noidentificacion, idprocedencia, lugar, idciudad, idcodigopostal, otrosdatos, wmid, tif, fechaempaque, identificacioncliente, idunidad,fecharegistro, horaregistro) VALUES
-        ('$ordencodigo',1,'$claveidentificacion','$idclaveidentificacion','1','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio','$conmensajeria','$mensajeria','$guia','$cantidad','$procedencia','$nombreproce','$estado','$cp','$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
-$query=pg_query($conexion,$Consulta);
+
+
+try{
+        $Consulta="INSERT INTO ordenserviciomuestra(ordencodigo, ordenversion, claveidentificacion, idclaveidentificacion, noversion, estatus, idurgencia, disponible, conetiqueta, noetiqueta, nacional, internacional, idmuestra, fechamuestra, fechacaducidad, cantidad, lote, fechaenvio, conmensajeria, idmensajeria, noguia, noidentificacion, idprocedencia, lugar, idciudad, idcodigopostal, otrosdatos, wmid, tif, fechaempaque, identificacioncliente, idunidad,fecharegistro, horaregistro) VALUES
+        ('$ordencodigo',1,'$claveidentificacion','$idclave','1','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio','$conmensajeria','$mensajeria','$guia','$cantidad','$procedencia','$nombreproce','$estado','$cp','$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+        $query=pg_query($conexion,$Consulta);
+        echo 1;
+}catch (Exception $e) {
+        echo 'Excepción capturada: ',  $e->getMessage(), "\n";
+}
+
 
 ?>

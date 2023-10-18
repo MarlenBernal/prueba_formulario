@@ -10,7 +10,7 @@ $(document).ready(function(){
             data: cadena,
             success: function(res){
                 if(res==1){
-                    $(location).attr('href', 'orden_servicio.php');
+                    $(location).attr('href', 'principal.php');
                     $('#Login_Form')[0].reset();
                 }else if(res!=1){
                     alert ("Datos Incorrectos");

@@ -34,7 +34,6 @@ $(document).ready(function(){
                 if(res==1){
                     window.location.replace("datos_muestra.php");
                     alert ("Orden Realizada");
-                    $('#Form_Orden')[0].reset();
                     
                 }else if(res==2){
                     alert("Orden de ya existe");

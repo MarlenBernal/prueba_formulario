@@ -1,4 +1,12 @@
-
+<?php 
+ob_start();
+    session_start();
+    $salida="";
+        $varSesion=$_SESSION["usuario"];
+        if ($varSesion==''|| $varSesion==null) {
+            header("location:index.html");
+        }else{
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,20 +21,11 @@
     <section class="Orden">
         <div class="Orden_Contenedor">
             <form class="Orden_Form" action="" method="post" autocomplete="off" id="Form_Orden">
-                <?php
-                include "php/conexion.php";
-                $d1="0";
-                $d2=23000000;
-                $d3="SELECT MAX(idordentrabajo) idordentrabajo  From ordenservicio";
-                $res=pg_query($conexion,$d3);
-                $srt=pg_fetch_assoc($res);
-                $suma= $d1.$srt['idordentrabajo']+$d2+1;
-                ?>
                 <h1>Nueva Orden de Servicio</h1>
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Número de Orden de Servicio:</label>
-                        <input type="text" id="Buscar" value="<?php echo $suma ?>" disabled>
+                        <input type="text" id="Buscar" value="<?php $resp=$_SESSION['ordentrabajo']; echo $resp ?>" disabled>
                     </div>
                     <div class="Orden_Dato">
                         <label>Fecha:</label>
@@ -39,27 +38,27 @@
                 </div>
                 <div class="Orden_Dato">
                     <label for="campo">Cliente:</label>
-			        <input type="text" name="cliente" id="campo">
+			        <input type="text" name="cliente" id="campo" value="<?php if(isset($_COOKIE['cliente'])){echo $_COOKIE['cliente'];} ?>">
 			        <ul id="lista"></ul>
                 </div>
                 <div class="Orden_Dato">
                     <label>Razón Social:</label>
-                    <input type="text" id="razonsocial">
+                    <input type="text" id="razonsocial" value="<?php if(isset($_COOKIE['razon'])){echo $_COOKIE['razon'];} ?>">
                 </div>
                 <div class="Orden_Dato">
                     <label>Dirección:</label>
-                    <input type="text" name="direccion" id="campo_dic">
+                    <input type="text" name="direccion" id="campo_dic" value="<?php if(isset($_COOKIE['direccion'])){echo $_COOKIE['direccion'];} ?>">
                     <ul id="lista_cli"></ul>
                 </div>
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Correo:</label>
-                        <input type="text" id="Correo">
+                        <input type="text" id="Correo" value="<?php if(isset($_COOKIE['correo'])){echo $_COOKIE['correo'];} ?>">
                         <ul id="lista_correo"></ul>
                     </div>
                     <div class="Orden_Dato">
                         <label>Teléfono:</label>
-                        <input type="text" id="telefono">
+                        <input type="text" id="telefono" value="<?php if(isset($_COOKIE['telefono'])){echo $_COOKIE['telefono'];} ?>">
                         <ul id="lista_tel"></ul>
                     </div>
                 </div>
@@ -68,11 +67,11 @@
                         <input type="checkbox" id="Dato_check">
                         <label>Representante:</label>
                     </div>
-                    <select class="Select_Representante" id="Representante" name="representante" disabled></select>
+                    <select class="Select_Representante" id="Representante" name="representante" disabled ></select>
                 </div>
                 <div class="Orden_analisis">
                     <input type="button" value="Agregar Análisis" id="Enviar">
-                    <input type="button" value="Actualizar Tabla">
+                    <input type="button" value="Actualizar Tabla" id="Actualizar">
                 </div>
                 <div class="Orden_Tabla">
                     <table class="Tabla_Orden">
@@ -106,5 +105,7 @@
     <script src="js/representante.js"></script>
     <script src="js/datos.js"></script>
     <script src="js/agregar_orden.js"></script>
+    <script src="js/Actualizar_Tabla.js"></script>
 </body>
 </html>
+<?php  } ?>

@@ -8,7 +8,7 @@
 .Contenedor{
     width: 100%;
     height: 100vh;
-    background: #0000 url("../img/Fondo.jpg")no-repeat;
+    background: #0000 url("../img/Fondo.webp")no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -100,7 +100,7 @@
     display: grid;
     place-items: center;
     gap:5px;
-    background:linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445)) ,url("../img/Modelo1.jpg")no-repeat;
+    background:linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445)) ,url("../img/laboratorio.webp")no-repeat;
     background-size: cover;
     background-position: center;
     padding: 20px;
