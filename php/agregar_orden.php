@@ -1,6 +1,6 @@
 <?php
 require 'conexion.php';
-
+session_start();
 
 $orden=$_POST['orden'];
 $fecha=$_POST['fecha'];
@@ -11,16 +11,16 @@ $n2=pg_query($conexion,$n1);
 $n3=pg_fetch_assoc($n2);
 $n4=$n3['idcliente'];
 
-setcookie('cliente', $nombre, time()+3600);
+	$_SESSION['cliente']=$nombre;
 
 $razon=$_POST['razon'];
-setcookie('razon', $razon, time()+3600);
+	$_SESSION['razon']=$razon;
 $direccion=$_POST['direccion'];
-setcookie('direccion', $direccion, time()+3600);
+	$_SESSION['direccion']=$direccion;
 $correo=$_POST['correo'];
-setcookie('correo', $correo, time()+3600);
+	$_SESSION['correo']=$correo;
 $telefono=$_POST['telefono'];
-setcookie('telefono', $telefono, time()+3600);
+	$_SESSION['telefono']=$telefono;
 $d3="SELECT MAX(idordentrabajo) idordentrabajo  From ordenservicio";
 $res=pg_query($conexion,$d3);
 $srt=pg_fetch_assoc($res);
@@ -35,7 +35,7 @@ $r1="SELECT idversion FROM representante where idrepresentante = '$representante
 $r2=pg_query($conexion,$r1);
 $r3=pg_fetch_assoc($r2);
 $r4=$r3['idversion'];
-setcookie('representante', $representante, time()+3600);
+	$_SESSION['representante']=$representante;
 
 if($numrow==1){
 	$agregarorden="UPDATE public.ordenservicio SET

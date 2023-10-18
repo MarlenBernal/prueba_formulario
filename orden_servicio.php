@@ -38,27 +38,27 @@ ob_start();
                 </div>
                 <div class="Orden_Dato">
                     <label for="campo">Cliente:</label>
-			        <input type="text" name="cliente" id="campo" value="<?php if(isset($_COOKIE['cliente'])){echo $_COOKIE['cliente'];} ?>">
+			        <input type="text" name="cliente" id="campo">
 			        <ul id="lista"></ul>
                 </div>
                 <div class="Orden_Dato">
                     <label>Razón Social:</label>
-                    <input type="text" id="razonsocial" value="<?php if(isset($_COOKIE['razon'])){echo $_COOKIE['razon'];} ?>">
+                    <input type="text" id="razonsocial" >
                 </div>
                 <div class="Orden_Dato">
                     <label>Dirección:</label>
-                    <input type="text" name="direccion" id="campo_dic" value="<?php if(isset($_COOKIE['direccion'])){echo $_COOKIE['direccion'];} ?>">
+                    <input type="text" name="direccion" id="campo_dic">
                     <ul id="lista_cli"></ul>
                 </div>
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Correo:</label>
-                        <input type="text" id="Correo" value="<?php if(isset($_COOKIE['correo'])){echo $_COOKIE['correo'];} ?>">
+                        <input type="text" id="Correo">
                         <ul id="lista_correo"></ul>
                     </div>
                     <div class="Orden_Dato">
                         <label>Teléfono:</label>
-                        <input type="text" id="telefono" value="<?php if(isset($_COOKIE['telefono'])){echo $_COOKIE['telefono'];} ?>">
+                        <input type="text" id="telefono">
                         <ul id="lista_tel"></ul>
                     </div>
                 </div>
