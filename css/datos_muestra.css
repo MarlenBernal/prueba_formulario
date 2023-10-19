@@ -23,6 +23,12 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@media (max-width:767px){
+  .Formulario_Muestra{
+    width: 100%;
+  }
+}
+
 
 .div_autocompletar{
   width: 100%;
@@ -39,8 +45,7 @@
 .Dato_Mensajeria{
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .Dato_Mensajeria label{
@@ -59,9 +64,8 @@
 
 .Contenedor_Urgencia{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
   gap: 8px;
 }
 
@@ -91,6 +95,7 @@
 .Datos_Muestra{
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -117,6 +122,13 @@
   display:flex;
   width: 100%;
   gap: 8px;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+@media (max-width:767px){
+  .Dato_Fechas{
+    display: grid;
+  }
 }
 
 .Dato_Fechas label{
@@ -131,8 +143,7 @@
 .Contenedor_lote{
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .Contenedor_lote label{
@@ -155,6 +166,7 @@
 .Dato_Item_Tif{
   width: 100%;
   display: 	flex;
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -187,6 +199,7 @@
 
 .Dato_Procedencia{
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 8px;
 }
@@ -202,6 +215,7 @@
 .Estado_Dato{
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .Estado_Dato label{
@@ -221,6 +235,7 @@
 
 .Datos_Otros{
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 8px;
 }

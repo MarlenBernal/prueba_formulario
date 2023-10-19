@@ -108,4 +108,7 @@
     .Encabezado_Muestras h1{
         font-size: 2rem;
     }
+    .Encabezado_Muestras img{
+        width: 90%;
+    }
 }

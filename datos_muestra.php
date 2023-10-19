@@ -24,8 +24,10 @@ ob_start();
             <h1>Datos de Muestra</h1>
             <div class="Contenedor_Dato">
                 <div class="Dato_Mensajeria">
-                    <input type="checkbox" value="1" name="checkmensaje" id="check_mensajeria">
-                    <label>Mensajería</label>
+                    <div>
+                        <input type="checkbox" value="1" name="checkmensaje" id="check_mensajeria">
+                        <label>Mensajería</label>
+                    </div>
                     <select class="Mensajeria_Select" name="mensajeria" id="mensajeria" disabled></select>
                 </div>
                 <div class="Dato_Mensajeria">

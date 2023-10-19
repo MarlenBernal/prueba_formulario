@@ -75,21 +75,24 @@ ob_start();
                 </div>
                 <div class="Orden_Tabla">
                     <table class="Tabla_Orden">
-                        <tr>
-                            <th>Act</th>
-                            <th>Ord</th>
-                            <th>Ver</th>
-                            <th>Fir</th>
-                            <th>Cap</th>
-                            <th>Clave</th>
-                            <th>Muestra</th>
-                            <th>Estatus</th>
-                            <th>F.Muestra</th>
-                            <th>Caducidad</th>
-                            <th>Cant</th>
-                            <th>Lote</th>
-                            <th>Envió</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Act</th>
+                                <th>Ord</th>
+                                <th>Ver</th>
+                                <th>Fir</th>
+                                <th>Cap</th>
+                                <th>Clave</th>
+                                <th>Muestra</th>
+                                <th>Estatus</th>
+                                <th>F.Muestra</th>
+                                <th>Caducidad</th>
+                                <th>Cant</th>
+                                <th>Lote</th>
+                                <th>Envió</th>
+                            </tr>
+                        </thead>
+                        
                         <tbody id="Datos_Tabla"></tbody>
                     </table>
                 </div>

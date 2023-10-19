@@ -10,7 +10,6 @@
     height: 100vh;
     background: #0000 url("../img/Fondo.webp")no-repeat;
     background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,17 +68,21 @@
 
 .Login{
     width: 80%;
-    position: absolute;
-    background-color: #e8e8e8;
+    background-color: #f6f6f6;
     transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .Login_Contenedor{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     gap: 10px;
 }
+
 
 .Login_Form{
     width: 100%;
@@ -114,7 +117,7 @@
 }
 
 .Login_Info img{
-    width: 180px;
+    width: 80%;
 }
 
 .Login_Info h1{
