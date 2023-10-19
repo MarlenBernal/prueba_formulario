@@ -1,134 +1,160 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  margin: 0;
-  overflow: 100%;
-}
-.contenedor {
-  width: 100%;
-  height: 100px;
-  display: grid;
-  place-items: center;
-}
-.formul {
+.Analisis_Contenedor {
   width: 700px;
-  background-color: rgb(203, 216, 212);
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 35px;
-}
-.dat1 {
-  width: 100%;
-  background-color: rgb(132, 10, 101);
-  text-align: center;
-  color: rgb(252, 251, 251);
-}
-.labo{
-  width: 100%;
-  background-color: rgb(132, 10, 101);
-  color: rgb(252, 251, 251);
-}
-.fitos {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-.fitosan {
-  justify-content: space-between;
-}
-.tabla {
-  width: 100%;
-  display: flex;
-}
-.tab {
-  width: 100%;
-  display: flex;
-}
-.reg {
-  width: 160px;
-}
-.tab1 {
-  width: 100%;
-  background-color: rgb(24, 24, 100);
-  text-align: center;
-}
-.clav{
-  width: 100%;
-  background-color:rgb(132, 10, 101);
-  text-align: center;
-  color: rgb(252, 251, 251);
-}
-
-/* Note that you only needs to edit the config to customize the button! */
-
-.plusButton {
-  /* Config start */
-  --plus_sideLength: 1rem;
-  --plus_topRightTriangleSideLength: 0.4rem;
-  /* Config end */
-  position: relative;
-  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
-  width: var(--plus_sideLength);
-  height: var(--plus_sideLength);
-  background-color: #000000;
-  overflow: hidden;
+  padding: 20px;
 }
-
-.plusButton::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
-  border-style: solid;
-  border-color: transparent white transparent transparent;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+@media (max-width:763px){
+  .Analisis_Contenedor{
+    width: 100%;
+  }
 }
-
-.plusButton:hover {
-  cursor: pointer;
+.Analisis_Formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
-.plusButton:hover::before {
-  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+.Analisis_titulo {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
 }
-
-.plusButton:focus-visible::before {
-  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
-}
-
-.plusButton>.plusIcon {
-  fill: white;
-  width: calc(var(--plus_sideLength) * 0.7);
-  height: calc(var(--plus_sideLength) * 0.7);
-  z-index: 1;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
-}
-
-.plusButton:hover>.plusIcon {
-  fill: black;
-  transform: rotate(180deg);
-}
-
-.plusButton:focus-visible>.plusIcon {
-  fill: black;
-  transform: rotate(180deg);
-}
-
-.bot_usuari{
+.Analisis_laboratorios {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
+.Analisis_laboratorios input {
+  width: 100%;
+}
+.Analisis_analisis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Analisis_analisis input {
+  width: 250px;
+}
+.Analisis_boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Analisis_tabla {
+  width: 100%;
+  margin: 40px 40px 20px;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  border: 1px solid #1a2929;
+}
+td,
+th {
+  text-align: center;
+  padding: 8px;
+  border-right: 1px solid #1a2929;
+}
+td {
+  font-size: 12px;
+}
+thead th {
+  color: #ffffff;
+  background: #1a2929;
+}
+tr:nth-child(even) {
+  background: #9edfd3;
+}
+@media (max-width: 767px) {
+  table {
+    display: block;
+    width: 100%;
+  }
+  thead,
+  tbody,
+  thead th {
+    display: block;
+  }
+  thead th:last-child {
+    border-bottom: none;
+  }
+  thead {
+    float: left;
+  }
+  tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  td,
+  th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  tbody tr {
+    display: table-cell;
+  }
+  tbody tr:nth-child(odd) {
+    background: transparent;
+  }
+  tr:nth-child(even) {
+    background: transparent;
+  }
+  tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #1a2929;
+  }
+  tr rd :nth-child(even) {
+    background-color: #9edfd3;
+    border-right: 1px solid #1a2929;
+  }
+  tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+.Analisis_enviar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.Analisis_enviar input{
+  width: 250px;
+}
+

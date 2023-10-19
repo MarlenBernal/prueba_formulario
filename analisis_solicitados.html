@@ -4,80 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisis solicitados</title>
     <link rel="stylesheet" href="css/analisis_solicitados.css">
+    <title>Analisis _solicitados</title>
 </head>
 
 <body>
-    <div class="contenedor">
-        <form class="formul">
-            <div class="dat1">
-                <label class="labor" for="lab">ANALISIS SOLICITADOS</label>
-            </div>
-
-            <div class="labora">
-                <table>
-                    <div class="labo">
-                        <label for="labs">LABORATORIOS</label>
-                    </div>
-                    <tr>
-                        <div class="fitos">
-                            <div class="">
-                                <input type="checkbox" name="fito" id="fito">
-                                <label for="fito">FITOSANITARIOS</label>
-                            </div>
-                            <input type="checkbox" class="fitosan" name="fit" id="fit">
-                        </div>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="clav">
-                <table>
-                    <tr>
-                        <th>*</th>
-                        <th>CLAVE</th>
-                        <th>ANALISIS</th>
-                        <th>NORMA</th>
-                        <th>UNIDAD</th>
-                        <th>LAB</th>
-                        <th>PAS</th>
-                        <th>EXT</th>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="bot_usuari">
-                <div tabindex="0" class="plusButton">
-                    <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                        <g mask="url(#mask0_21_345)">
-                            <path
-                                d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z">
-                            </path>
-                        </g>
-                    </svg>
+    <section class="Analisis">
+        <div class="Analisis_Contenedor">
+            <form class="Analisis_Formulario">
+                <div class="Analisis_titulo">
+                    <h1>ANÁLISIS SOLICITADOS</h1>
                 </div>
-                <label for="usu">USUARIO DE MUESTRA</label>
-            </div>
+                <div class="Analisis_laboratorios">
+                    <h1>Laboratorios</h1>
+                    <select name="" id="">
 
-            <div>
-                <label for="registrado">REGISTRADO POR:</label>
-                <label for="regi" id="regi" class="regist" name="regi">
-                    <select name="regi" class="reg" id="regi">
-                        <option value="">SELECCIONA UNA OPCION</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
                     </select>
-                </label>
+                </div>
 
-                <button>ACEPTAR</button>
-                <button>CANCELAR</button>
-                <button>LIMPIAR</button>
-                <label for="">REGISTRO</label>
-            </div>
-        </form>
-    </div>
+                <div class="Analisis_analisis">
+                    <h1>Análisis</h1>
+                    <select name="" id=""></select>
+                    <div class="Analisis_boton">
+                    <input type="submit" value="Agregar análisis">
+                </div>
+                </div>
+                <div class="Analisis_tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>CLAVE</th>
+                                <th>ANALISIS</th>
+                                <th>NORMA</th>
+                                <th>UNIDAD</th>
+                                <th>LAB</th>
+                                <th>PAS</th>
+                                <th>EXI</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="Analisis_enviar">
+                    <input type="submit" value="Enviar análisis">
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
