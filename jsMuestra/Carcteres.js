@@ -46,6 +46,29 @@ inputNumero.addEventListener("input", function () {
 
 });
 
+/*===============Fecha minima envio====================*/
+  var Fecha_Muestreo = document.getElementById('Fecha_muetreo');
+  var Fecha_Envio = document.getElementById('Fecha_envio');
+  Fecha_Muestreo.addEventListener('change', function() {
+    var fechaInicial = Fecha_Muestreo.value;
+    Fecha_Envio.setAttribute('min', fechaInicial);
+  });
+
+
+/*===============Fecha minima enpaquetado====================*/
+  var Fecha_Empaque = document.getElementById('Fecha_Empaque');
+  Fecha_Muestreo.addEventListener('change', function() {
+    var fechaInicial2 = Fecha_Muestreo.value;
+    Fecha_Empaque.setAttribute('min', fechaInicial2);
+  });
+    /*===============Fecha minima caducidad====================*/
+  var fecha_Caducidad = document.getElementById('Fecha_Caducidad');
+  Fecha_Muestreo.addEventListener('change',function(){
+    var fechaInicial3= Fecha_Muestreo.value;
+    fecha_Caducidad.setAttribute('min',fechaInicial3);
+  });
+
+  
 
 
 

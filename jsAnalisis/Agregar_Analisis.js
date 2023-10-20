@@ -1,9 +1,9 @@
-function registrar_muestra(){
-    var parametros = new FormData($("#Formulario_Muetra")[0]);
+function registrar_Analisis(){
+    var parametros = new FormData($("#Analisis_Form")[0]);
     event.preventDefault();
         $.ajax({
             data:parametros,
-            url: "phpMuestar/Orden_muestra.php",
+            url: "phpAnalisis/Agregar_Analisis.php",
             type: "POST",
             contentType:false,
             processData: false,
@@ -13,7 +13,7 @@ function registrar_muestra(){
             success: function(response) {
                 if(response==1){
                     alert ('Muestra Registrada');
-                    window.location.replace("analisis_solicitados.php");
+                    //window.location.replace("orden_servicio.php");
                 }else{
                     alert (response);
                 } 

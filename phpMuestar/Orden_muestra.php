@@ -12,6 +12,7 @@ $srt=pg_fetch_assoc($res);
 $idclave=$srt['idclaveidentificacion']+1;
 
 $claveidentificacion=$suma."_".$idclave;
+$_SESSION['claveidentificacion']=$claveidentificacion;
 $mensajeria=$_POST['mensajeria'];
 $guia=$_POST['guias'];
 $urgencia=$_POST['urgen'];
@@ -22,6 +23,7 @@ $m2="SELECT * FROM muestra where espanol = '$m1'";
 $m3=pg_query($conexion,$m2);
 $m4=pg_fetch_assoc($m3);
 $muestra=$m4['idmuestra'];
+$_SESSION['muestra']=$muestra;
 $cantidad=$_POST['cantidad'];
 
 $u1=$_POST['unidad'];
@@ -71,11 +73,17 @@ $descripcion_cliente=$_POST['descripcion_cliente'];
 $otros_datos=$_POST['otros_datos'];
 $conmensajeria=$_POST['checkmensaje'];
 
+$noversion=1;
+$_SESSION['noversion']=$noversion;
+
+$ordenversion=1;
+$_SESSION['ordenversion']=$ordenversion;
+
 
 
 try{
         $Consulta="INSERT INTO ordenserviciomuestra(ordencodigo, ordenversion, claveidentificacion, idclaveidentificacion, noversion, estatus, idurgencia, disponible, conetiqueta, noetiqueta, nacional, internacional, idmuestra, fechamuestra, fechacaducidad, cantidad, lote, fechaenvio, conmensajeria, idmensajeria, noguia, noidentificacion, idprocedencia, lugar, idciudad, idcodigopostal, otrosdatos, wmid, tif, fechaempaque, identificacioncliente, idunidad,fecharegistro, horaregistro) VALUES
-        ('$ordencodigo',1,'$claveidentificacion','$idclave','1','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio','$conmensajeria','$mensajeria','$guia','$cantidad','$procedencia','$nombreproce','$estado','$cp','$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+        ('$ordencodigo','$ordenversion','$claveidentificacion','$idclave','$noversion','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio','$conmensajeria','$mensajeria','$guia','$cantidad','$procedencia','$nombreproce','$estado','$cp','$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
         $query=pg_query($conexion,$Consulta);
         echo 1;
 }catch (Exception $e) {

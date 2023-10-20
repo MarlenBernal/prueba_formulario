@@ -30,7 +30,7 @@ ob_start();
             <div class="Encabezado_Muestras">
                 <img src="img/analiziz.webp" alt="Imagen Analizis">
                 <h1>Muestra</h1>
-                <input class="Boton" type="submit" onclick="Hacer_muestra();">
+                <input class="Boton" type="submit" onclick="Hacer_muestra();" value="Nueva Muestra">
             </div>
         </div>
     </Section>

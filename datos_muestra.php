@@ -75,14 +75,14 @@ ob_start();
                     <input type="date" class="fechm" id="Fecha_muetreo" name="Fecha_muetreo">
 
                     <label for="fech_envio">Fecha de envió:</label>
-                    <input type="date" class="feche"  name="fecha_envio">
+                    <input type="date" class="feche"  name="fecha_envio" id="Fecha_envio">
                 </div>
                 <div class="Dato_Fechas">
                     <label for="fech_caducidad">Fecha de caducidad:</label>
-                    <input type="date" class="fechc" name="fecha_caducidad">
+                    <input type="date" class="fechc" name="fecha_caducidad" id="Fecha_Caducidad">
 
                     <label for="fech_empaque">Fecha de empaque:</label>
-                    <input type="date" class="fechem" name="fecha_empaque">
+                    <input type="date" class="fechem" name="fecha_empaque" id="Fecha_Empaque">
                 </div>
             </div>
             
