@@ -1,3 +1,3 @@
 function Conterolcliente(){
-    window.location.href="Proximamente.php";
+    window.location.href="Control_Clientes.php";
 }

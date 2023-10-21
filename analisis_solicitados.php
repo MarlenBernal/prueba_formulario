@@ -57,7 +57,7 @@ ob_start();
                     </table>
                 </div>
                 <div class="Analisis_enviar">
-                    <input type="submit" value="Contro de Cliente" onclick="Conterolcliente();">
+                    <input type="button" value="Contro de Cliente" onclick="Conterolcliente();">
                 </div>
             </form>
         </div>
