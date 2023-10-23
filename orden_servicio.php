@@ -1,11 +1,13 @@
-<?php 
+<?php
+
+
 ob_start();
-    session_start();
+    session_start();/*
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{
+        }else{*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -111,4 +113,4 @@ ob_start();
     <script src="js/Actualizar_Tabla.js"></script>
 </body>
 </html>
-<?php  } ?>
+<?php /*  } */?>

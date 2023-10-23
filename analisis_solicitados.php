@@ -1,11 +1,12 @@
-<?php 
+<?php
+
 ob_start();
-    session_start();
+    session_start();/* 
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{
+        }else{*/
 ?>
 
 <!DOCTYPE html>
@@ -72,4 +73,4 @@ ob_start();
 <script src="jsAnalisis/ActualizarAnalisis.js"></script>
 <script src="jsAnalisis/cambiar.js"></script>
 
-<?php } ?>
+<?php /* } */?>

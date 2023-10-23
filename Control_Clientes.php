@@ -1,11 +1,13 @@
 <?php 
+
+
 ob_start();
-    session_start();
+    session_start();/*
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{
+        }else{*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +54,8 @@ ob_start();
                     </div>
 
                     <div class="dato_Boton">
-                        <input type="button" value="Agregar Control" onclick="registrar_Control();" >
+                        <input type="button" value="Agregar Control" id="Actualizar_Tabla" onclick="registrar_Control();" >
+                        <input type="button" value="Actualizar"  id="Actualizar_Tabla2">
                     </div>
                 </div>
                 <div class="Control_tabla">
@@ -66,13 +69,13 @@ ob_start();
                                 <th>Num. Lote</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="Tabla_Analisis">
                             
                         </tbody>
                     </table>
                 </div>
                 <div class="Control_enviar">
-                    <input type="submit" value="Enviar ">
+                <a class="BotonTerminarMuetra" href="orden_servicio.php">Terminar Muestra</a>
                 </div>
             </form>
         </div>
@@ -83,5 +86,5 @@ ob_start();
 
 
 <script src="jsControl/Agregar_control.js"></script>
-
-<?php } ?>
+<script src="jsControl/Actualizar_Control.js"></script>
+<?php /* } */ ?>
