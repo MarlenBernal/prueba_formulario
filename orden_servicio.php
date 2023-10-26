@@ -1,14 +1,14 @@
 <?php
 ob_start();
-    session_start();
+    session_start();/*
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{
+        }else{*/
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,4 +116,4 @@ ob_start();
     <script src="js/Cancelar_Muestra.js"></script>
 </body>
 </html>
-<?php   } ?>
+<?php /*   } */?>

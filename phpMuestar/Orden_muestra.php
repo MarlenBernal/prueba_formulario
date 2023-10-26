@@ -6,7 +6,7 @@ session_start();
 $suma= $_SESSION['ordentrabajo'];
 $ordencodigo=$suma;
 
-$d3="SELECT MAX(idclaveidentificacion) idclaveidentificacion  From ordenserviciomuestra where ordecodigo='$ordencodigo'";
+$d3="SELECT MAX(idclaveidentificacion) idclaveidentificacion  From ordenserviciomuestra where ordencodigo ='$ordencodigo'";
 $res=pg_query($conexion,$d3);
 $srt=pg_fetch_assoc($res);
 $idclave=$srt['idclaveidentificacion']+1;
@@ -15,18 +15,22 @@ $claveidentificacion=$suma."_".$idclave;
 $_SESSION['claveidentificacion']=$claveidentificacion;
 
 
-$mensajeria=$_POST['mensajeria'];
-if($mensajeria==""){
+if(isset($_POST['mensajeria'])){
+        $mensajeria=$_POST['mensajeria'];
+}else{
         $mensajeria="null";
+};        
+
+
+
+if(isset($_POST['guias'])){
+        $guia=$_POST['mensajeria']; 
+        
 }else{
-        $mensajeria=$_POST['mensajeria'];  
+        $guia='null';  
 }
-$guia=$_POST['guias'];
-if($guia==""){
-        $guia='Null';
-}else{
-        $guia=$_POST['mensajeria'];  
-}
+
+
 $urgencia=$_POST['urgen'];
 $idioma=$_POST['idioma'];
 
@@ -70,20 +74,37 @@ $nombreproce=$_POST['nombre_procedencia'];
 $municipio=$_POST['municipio'];
 
 $e1=$_POST['estado'];
-$e2="SELECT * FROM ciudad where ciudad = '$e1'";
-$e3=pg_query($conexion,$e2);
-$e4=pg_fetch_assoc($e3);
-$estado=$e4['idciudad'];
+if ($e1!='') {
+        $e2="SELECT * FROM ciudad where ciudad = '$e1'";
+        $e3=pg_query($conexion,$e2);
+        $e4=pg_fetch_assoc($e3);
+        $estado=$e4['idciudad'];
+} else {
+        $estado='null';
+}
+
+
 
 $cp1=$_POST['cp'];
-$cp2="SELECT * FROM codigopostal where codigopostal = '$cp1'";
-$cp3=pg_query($conexion,$cp2);
-$cp4=pg_fetch_assoc($cp3);
-$cp=$cp4['idcodigopostal'];
+if($cp1!=''){
+        $cp2="SELECT * FROM codigopostal where codigopostal = '$cp1'";
+        $cp3=pg_query($conexion,$cp2);
+        $cp4=pg_fetch_assoc($cp3);
+        $cp=$cp4['idcodigopostal'];
+}else{
+        $cp='null';
+}
+
+
 
 $descripcion_cliente=$_POST['descripcion_cliente'];
 $otros_datos=$_POST['otros_datos'];
-$conmensajeria=$_POST['checkmensaje'];
+
+if(isset($_POST['checkmensaje'])){
+        $conmensajeria=$_POST['checkmensaje'];
+}else{
+        $conmensajeria='null';
+};
 
 $noversion=1;
 $_SESSION['noversion']=$noversion;
@@ -95,7 +116,7 @@ $_SESSION['ordenversion']=$ordenversion;
 
 try{
         $Consulta="INSERT INTO ordenserviciomuestra(ordencodigo, ordenversion, claveidentificacion, idclaveidentificacion, noversion, estatus, idurgencia, disponible, conetiqueta, noetiqueta, nacional, internacional, idmuestra, fechamuestra, fechacaducidad, cantidad, lote, fechaenvio, conmensajeria, idmensajeria, noguia, noidentificacion, idprocedencia, lugar, idciudad, idcodigopostal, otrosdatos, wmid, tif, fechaempaque, identificacioncliente, idunidad,fecharegistro, horaregistro) VALUES
-        ('$ordencodigo','$ordenversion','$claveidentificacion','$idclave','$noversion','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio','$conmensajeria',$mensajeria,'$guia','$cantidad','$procedencia','$nombreproce','$estado','$cp','$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+        ('$ordencodigo','$ordenversion','$claveidentificacion','$idclave','$noversion','Captura','$urgencia','0','0','0','1','0','$muestra','$fmuestreo','$fcaducidad','$cantidad','$lote','$fenvio',$conmensajeria,$mensajeria,'$guia','$cantidad','$procedencia','$nombreproce',$estado,$cp,'$otros_datos','$ittem','$tif','$fempaque','$descripcion_cliente','$unidad',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
         $query=pg_query($conexion,$Consulta);
         echo 1;
 }catch (Exception $e) {

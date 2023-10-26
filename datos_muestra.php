@@ -1,15 +1,15 @@
 <?php 
 
 ob_start();
-    session_start();
+    session_start();/*
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{
+        }else{*/
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -183,4 +183,4 @@ ob_start();
 <script src="jsMuestra/Orden_Muetra.js"></script>
 <script src="jsMuestra/Cancelar_Muestra.js"></script>
 
-<?php  } ?>
+<?php /*  } */?>
