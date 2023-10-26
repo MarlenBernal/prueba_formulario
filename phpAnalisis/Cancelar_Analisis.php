@@ -17,8 +17,4 @@ if($rowBusqueda!=0){
     echo 2;
 }
 
-
-
-
-
 ?>
