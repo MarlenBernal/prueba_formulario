@@ -1,13 +1,11 @@
 <?php
-
-
 ob_start();
-    session_start();/*
+    session_start();
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{*/
+        }else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +25,7 @@ ob_start();
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Número de Orden de Servicio:</label>
-                        <input type="text" id="Buscar" value="<?php $resp=$_SESSION['ordentrabajo']; echo $resp ?>" disabled>
+                        <input type="text" id="Buscar" name="Buscar" value="<?php $resp=$_SESSION['ordentrabajo']; echo $resp ?>" disabled>
                     </div>
                     <div class="Orden_Dato">
                         <label>Fecha:</label>
@@ -40,8 +38,8 @@ ob_start();
                 </div>
                 <div class="Orden_Dato">
                     <label for="campo">Cliente:</label>
-			        <input type="text" name="cliente" id="campo">
-			        <ul id="lista"></ul>
+			        <input list="clientes_list" type="text" name="cliente" id="campo">
+			        <datalist class="Lista_Clientes" id="lista"></datalist>
                 </div>
                 <div class="Orden_Dato">
                     <label>Razón Social:</label>
@@ -49,19 +47,19 @@ ob_start();
                 </div>
                 <div class="Orden_Dato">
                     <label>Dirección:</label>
-                    <input type="text" name="direccion" id="campo_dic">
-                    <ul id="lista_cli"></ul>
+                    <input list="lista_cl" type="text" name="direccion" id="campo_dic">
+                    <datalist class="Lista_Clientes" id="lista_cli"></datalist>
                 </div>
                 <div class="Orden_Grupo">
                     <div class="Orden_Dato">
                         <label>Correo:</label>
-                        <input type="text" id="Correo">
-                        <ul id="lista_correo"></ul>
+                        <input list="lista_corro" type="text" id="Correo">
+                        <datalist id="lista_correo"></datalist>
                     </div>
                     <div class="Orden_Dato">
                         <label>Teléfono:</label>
-                        <input type="text" id="telefono">
-                        <ul id="lista_tel"></ul>
+                        <input list="lista_tl " type="text" id="telefono">
+                        <datalist id="lista_tel"></datalist>
                     </div>
                 </div>
                 <div class="Orden_Dato_check">
@@ -98,7 +96,11 @@ ob_start();
                         <tbody id="Datos_Tabla"></tbody>
                     </table>
                 </div>
-                <input type="submit" value="Enviar">
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="button" value="Cancelar" onclick="Cancelar_Muestra();">
+
+                </div>
             </form>
         </div>
     </section>
@@ -111,6 +113,7 @@ ob_start();
     <script src="js/datos.js"></script>
     <script src="js/agregar_orden.js"></script>
     <script src="js/Actualizar_Tabla.js"></script>
+    <script src="js/Cancelar_Muestra.js"></script>
 </body>
 </html>
-<?php /*  } */?>
+<?php   } ?>

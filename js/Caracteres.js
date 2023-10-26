@@ -16,10 +16,10 @@ function mostrarContraseña() {
   var eye=document.getElementById("Img_eye");
   if(campoPassword.type=="password"){
     campoPassword.type = "text";
-    eye.src="img/eyen.png";
+    eye.src="img/eyen.webp";
   }else if(campoPassword.type=="text"){
     campoPassword.type = "password";
-    eye.src="img/eye.png";
+    eye.src="img/eye.webp";
   }
   
 }
@@ -29,10 +29,10 @@ function mostrarContraseña1() {
   var eye=document.getElementById("Img_eye1");
   if(campoPassword.type=="password"){
     campoPassword.type = "text";
-    eye.src="img/eyen.png";
+    eye.src="img/eyen.webp";
   }else if(campoPassword.type=="text"){
     campoPassword.type = "password";
-    eye.src="img/eye.png";
+    eye.src="img/eye.webp";
   }
   
 }
@@ -42,10 +42,10 @@ function mostrarContraseña2() {
   var eye=document.getElementById("Img_eye2");
   if(campoPassword.type=="password"){
     campoPassword.type = "text";
-    eye.src="img/eyen.png";
+    eye.src="img/eyen.webp";
   }else if(campoPassword.type=="text"){
     campoPassword.type = "password";
-    eye.src="img/eye.png";
+    eye.src="img/eye.webp";
   }
   
 }

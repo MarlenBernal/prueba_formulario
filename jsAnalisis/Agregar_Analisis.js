@@ -15,11 +15,11 @@ function registrar_Analisis(){
                     alert ('Muestra Registrada');
                     //window.location.replace("orden_servicio.php");
                 }else{
-                    alert (response);
+                    alert ('Este anlsis ya esta registrado');
                 } 
             },
             error:function(response){
-                alert(response);
+                alert ('Muestra Registrada');
             }
         });
 }

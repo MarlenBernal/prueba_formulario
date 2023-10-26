@@ -1,7 +1,7 @@
 <?php
 include "../php/conexion.php";
 
-$salida = "";
+$salida = "<option class='Opciones_Tipo' value=''>Seleccione Mensajeria</option>";
 
 $querry = "SELECT * FROM mensajeria";
 

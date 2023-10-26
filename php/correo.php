@@ -11,7 +11,7 @@ $query = pg_query($conexion,$sql);
 $html = "";
 
 while ($row = pg_fetch_array($query)) {
-	$html .= "<li onclick=\"moscor('" . $row["correo"] . "')\">" . $row["correo"] ."</li>";
+	$html .= "<option onclick=\"moscor('" . $row["correo"] . "')\">" . $row["correo"] ."</option>";
 }
 
 echo json_encode($html, JSON_UNESCAPED_UNICODE);

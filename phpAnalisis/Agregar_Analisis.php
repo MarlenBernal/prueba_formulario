@@ -10,7 +10,7 @@ $ordenversion=$_SESSION['ordenversion'];
 $Laboratorio=$_POST['Laboratorio'];
 $Analisis=$_POST['Analisis'];
 
-$Buscar="SELECT * FROM ordenserviciomuestranalisis where idanalisis= '$Analisis' and muestracodigo = '$muestracodigo' ";
+$Buscar="SELECT * FROM ordenserviciomuestranalisis where  ordencodigo='$Ordencodigo' and idanalisis= $Analisis ;";
 $Busca=pg_query($conexion,$Buscar);
 $numrows=pg_num_rows($Busca);
 
@@ -19,7 +19,9 @@ $SacarCosto=pg_query($conexion,$costo);
 $rowcosto=pg_fetch_assoc($SacarCosto);
 $costoreal=$rowcosto['costo'];
 
-    if($numrows==0){
+    if($numrows!=0){
+       echo 2;
+    }else{
         $Insertarlab="INSERT INTO ordenserviciomuestralab (ordencodigo,ordenversion,muestracodigo,muestraversion,idlaboratorio) 
         VALUES ('$Ordencodigo','$ordenversion','$muestracodigo','$NoVercion','$Laboratorio')";
         $Insertaranali="INSERT INTO ordenserviciomuestranalisis (ordencodigo,ordenversion,muestracodigo,muestraversion,idlaboratorio,idanalisis,estaactivo,precioreal)
@@ -29,8 +31,6 @@ $costoreal=$rowcosto['costo'];
         $query2=pg_query($conexion,$Insertaranali);
     
         echo 1;
-    }else{
-        echo 2;
     }
 
 

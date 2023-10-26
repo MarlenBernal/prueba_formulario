@@ -1,12 +1,12 @@
 <?php 
 
 ob_start();
-    session_start();/*
+    session_start();
     $salida="";
         $varSesion=$_SESSION["usuario"];
         if ($varSesion==''|| $varSesion==null) {
             header("location:index.html");
-        }else{*/
+        }else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,8 +54,8 @@ ob_start();
                 <div class="Datos_Muestra">
                     <label for="muestra">Muestra:</label>
                     <div class="div_autocompletar">
-                        <input class="muest" type="text" name="muestra" id="campo">
-                        <ul id="lista"></ul>
+                        <input class="muest" type="text" name="muestra" id="campo" style="text-transform:uppercase;">
+                        <datalist id="lista"></datalist>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ ob_start();
                     <input id="cantidad" type="text" name="cantidad" class="cant">
                     <label for="unidad">Unidad:</label>
                     <div class="div_autocompletar">
-                        <input type="text" name="unidad" id="campo_dic">
+                        <input type="text" name="unidad" id="campo_dic" style="text-transform:uppercase;">
                         <ul id="lista_cli"></ul>
                     </div>
                 </div>
@@ -112,30 +112,30 @@ ob_start();
                 <div class="Dato_Procedencia">
                     <label for="procedencia">Procedencia:</label>
                     <div class="div_autocompletar">
-                        <input type="text" class="proce" name="procedencia" id="campo_Proce">
+                        <input type="text" class="proce" name="procedencia" id="campo_Proce" style="text-transform:uppercase;">
                         <ul id="lista_proce"></ul>
                     </div>
                 </div>
                 <div class="Dato_Procedencia">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="nom" name="nombre_procedencia">
+                    <input type="text" class="nom" name="nombre_procedencia" style="text-transform:uppercase;">
                 </div>
                 <div class="Dato_Procedencia">
                     <label for="municipio">Municipio:</label>
-                    <input type= text name="municipio" class="muni" id="municipio">
+                    <input type= text name="municipio" class="muni" id="municipio" style="text-transform:uppercase;">
                 </div>
                 <div class="Dato_Procedencia">
                     <div class="Estado_Dato">
                         <label for="estado">Estado:</label>
                         <div class="div_autocompletar">
-                            <input type="text"  name="estado" id="campo_esta">
+                            <input type="text"  name="estado" id="campo_esta" style="text-transform:uppercase;">
                             <ul id="listaProce"></ul>
                         </div>
                     </div>
                     <div class="Estado_Dato">
                         <label for="cop">C.P.</label>
                         <div class="div_autocompletar">
-                            <input type="text" name="cp" id="campo_codigo">
+                            <input type="text" name="cp" id="campo_codigo" style="text-transform:uppercase;">
                             <ul id="listaCodigo"></ul>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ ob_start();
 
                 <div class="Datos_Otros">
                     <label >Otros datos:</label>
-                    <input for="otros_datos" class="otros_dato" type="text" name="otros_datos">
+                    <textarea for="otros_datos" class="otros_dato" type="text" name="otros_datos" style="text-transform:uppercase;"></textarea>
                 </div>
 
                 <div class="Datos_Otros">
@@ -166,6 +166,7 @@ ob_start();
             
             <div>
                 <input type="submit" onclick="registrar_muestra();" value="Registar Muestra">
+                <input type="button" value="Cancelar Muestra" id="Cancelar_Muestra" onclick="Cancelar_Cliente();">
             </div>
         </form>
     </section>
@@ -180,5 +181,6 @@ ob_start();
 <script src="jsMuestra/Codigopostal.js"></script>
 <script src="jsMuestra/Carcteres.js"></script>
 <script src="jsMuestra/Orden_Muetra.js"></script>
+<script src="jsMuestra/Cancelar_Muestra.js"></script>
 
-<?php /* } */?>
+<?php  } ?>
