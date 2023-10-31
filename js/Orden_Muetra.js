@@ -1,4 +1,4 @@
-function Hacer_muestra(){
+function Hacer_muestra(event){
     var parametros = new FormData($("#Formulario_Muetra")[0]);
     event.preventDefault();
         $.ajax({

@@ -1,14 +1,14 @@
 <?php
 ob_start();
-    session_start();/*
-    $salida="";
-        $varSesion=$_SESSION["usuario"];
-        if ($varSesion==''|| $varSesion==null) {
-            header("location:index.html");
-        }else{*/
+session_start();
+$id_Usuario=$_SESSION['id_usuario'];
+$Nombre=$_SESSION['Nombre'];
+if($id_Usuario=="" || $id_Usuario==null){
+    header("location:index.html");
+}else{
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,8 +96,8 @@ ob_start();
                         <tbody id="Datos_Tabla"></tbody>
                     </table>
                 </div>
-                <div>
-                    <input type="submit" value="Enviar">
+                <div id="Opciones_Envio">
+                    <input type="submit" value="Enviar" id="Enviar_Orden">
                     <input type="button" value="Cancelar" onclick="Cancelar_Muestra();">
 
                 </div>
@@ -114,6 +114,7 @@ ob_start();
     <script src="js/agregar_orden.js"></script>
     <script src="js/Actualizar_Tabla.js"></script>
     <script src="js/Cancelar_Muestra.js"></script>
+    <script src="js/Enviar_Orden.js"></script>
 </body>
 </html>
-<?php /*   } */?>
+<?php   } ?>

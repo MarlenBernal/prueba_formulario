@@ -8,13 +8,14 @@ if($id_Usuario=="" || $id_Usuario==null){
 }else{
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/Principal.css">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/Header.css">
+    <link rel="stylesheet" href="css/Proximanete.css">
 </head>
 <body>
     <header>
@@ -36,31 +37,20 @@ if($id_Usuario=="" || $id_Usuario==null){
             </div>
         </div>
     </header>
-
-    <!--=============================================-->
-    <section class="Menu">
-        <div class="Menu_Contenedor">
-            <h1>Bienvenido <?php  echo $Nombre ?></h1>
-            <div class="Menu_Navegador ">
-                <div class="Menu_Opciones Menu_Conocenos">
-                    <h2>Conocenos</h2>
-                    <img src="img/Gsmall.webp" alt="">
-                    <input type="button" value="Conocenos" id="Conocenos">
-                </div>
-                <div class="Menu_Opciones Menu_Nuevo">
-                    <h2>Nuevo Análisis</h2>
-                    <img src="img/Ilustracion1.webp" alt="">
-                    <input type="button" value="Nuevo Análisis" id="Nuevo_Analisis" onclick="Hacer_muestra();">
-                </div>
-                <div class="Menu_Opciones Menu_Mis">
-                    <h2>Mis Análisis</h2>
-                    <img src="img/Ilustracion2.webp" alt="">
-                    <input type="button" value="Mis Análisis" id="Mis_Analsis">
-                </div>
+    <!--==================================================-->
+    <Section class="Proximamente">
+        <div class="Proximamente_Contenedor">
+            <div class="Proximamente_Titulo">
+                <h1>Próximamente</h1>
+                <a class="Singin_Boton" href="Principal.php">Regresar Inicio</a>
+            </div>
+            <div class="Proximamente_Img">
+                <img src="img/Proximamnete.webp" alt="proximamente_Imagens">
             </div>
         </div>
-    </section>
-    <!--=============================================-->
+    </Section>
+
+    <!--==================================================-->
     <footer calss="Footer">
         <div class="Fotter_Contenedor">
             <div class="Footer_Logo">
@@ -74,6 +64,11 @@ if($id_Usuario=="" || $id_Usuario==null){
 </html>
 
 
-<script src="js/Direccionar.js"></script>
-<script src="js/Orden_Muetra.js"></script>
+
 <?php } ?>
+
+
+
+
+
+

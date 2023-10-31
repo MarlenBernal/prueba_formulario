@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#Cancelar_Analisis').on('click',function(){
+    $('#Cancelar_Analisis').on('click',function Eliminar_Analisi(){
         var parametros = new FormData($("#Analisis_Form")[0]);
         $.ajax({
             data: parametros,

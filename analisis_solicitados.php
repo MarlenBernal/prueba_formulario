@@ -1,16 +1,15 @@
 <?php
-
 ob_start();
-    session_start();/*
-    $salida="";
-        $varSesion=$_SESSION["usuario"];
-        if ($varSesion==''|| $varSesion==null) {
-            header("location:index.html");
-        }else{*/
+session_start();
+$id_Usuario=$_SESSION['id_usuario'];
+$Nombre=$_SESSION['Nombre'];
+if($id_Usuario=="" || $id_Usuario==null){
+    header("location:index.html");
+}else{
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -75,4 +74,4 @@ ob_start();
 <script src="jsAnalisis/cambiar.js"></script>
 <script src="jsAnalisis/Cancelar_Analsisi.js"></script>
 
-<?php /* } */?>
+<?php  } ?>

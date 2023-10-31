@@ -4,7 +4,7 @@ require "../php/conexion.php";
 
 $Ordenservicio=$_SESSION['ordentrabajo'];
 
-$BuscarAnalisis="SELECT * FROM ordenserviciomuestralab where ordencodigo='$Ordenservicio' and  muestracodigo=''";
+$BuscarAnalisis="SELECT * FROM ordenserviciomuestralab where ordencodigo='$Ordenservicio' and  muestracodigo='';
 $queryBuscar=pg_query($conexion,$BuscarAnalisis);
 $rowBusqueda=pg_num_rows($queryBuscar);
 
@@ -16,5 +16,9 @@ if($rowBusqueda!=0){
 }else{
     echo 2;
 }
+
+
+
+
 
 ?>

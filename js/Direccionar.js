@@ -1,23 +1,9 @@
-function Pedidos() {
-    window.location.href ="Pedidos.php";
-}
-
-function Lonas(){
-    window.location.href="Lonas.php";
-}
-
-function Productos(){
-    window.location.href="Proximamente.php";
-}
-
-function Especial(){
-    window.location.href="Proximamente.php";
-}
-
-function Digital(){
-    window.location.href="Proximamente.php";
-}
-
-function Web(){
-    window.location.href="Proximamente.php";
-}
+$(document).ready(function(){
+    $('.Menu_Navegador').on('click','#Conocenos',function(){
+        window.location.href = "https://gisenalabs.com.mx/";
+    });
+    
+    $('.Menu_Navegador').on('click','#Mis_Analsis',function(){
+        window.location.href = "Mis_Analisis.php";
+    });
+});
