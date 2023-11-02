@@ -22,9 +22,9 @@ $(document).ready(function(){
             return false;
         }
 
-        cadena="orden=" + $("#Buscar").val()+"&fecha="+$("#fecha").val()+"&cliente="+$("#campo").val()
-        +"&razon="+$("#razonsocial").val()+"&direccion="+$("#campo_dic").val()+"&correo="+$("#Correo").val()
-        +"&telefono="+$("#telefono").val()+"&representante="+$("#Representante").val();
+        cadena="orden=" + $("#Orden_Trabajo").val()+"&fecha="+$("#Fecha_Orden").val()+"&cliente="+$("#Orden_Cliente").val()
+        +"&razon="+$("#Orden_Razon").val()+"&direccion="+$("#Orden_Direcciones").val()+"&correo="+$("#Orden_Correo").val()
+        +"&telefono="+$("#Orden_Telefono").val()+"&representante="+$("#Orden_Representante").val();
 
         $.ajax({
             type: "POST",

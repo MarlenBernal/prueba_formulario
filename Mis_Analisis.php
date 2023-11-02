@@ -63,7 +63,7 @@ if($id_Usuario=="" || $id_Usuario==null){
 </body>
 </html>
 
-
+<script src="js/Orden_Muetra.js"></script>
 
 <?php } ?>
 

@@ -15,17 +15,15 @@ $claveidentificacion=$suma."_".$idclave;
 $_SESSION['claveidentificacion']=$claveidentificacion;
 
 
-$mensajeria=$_POST['mensajeria'];
-if($mensajeria==""){
+if(isset($_POST['mensajeria'])){
+        $mensajeria=$_POST['mensajeria']; 
+}else{
         $mensajeria="null";
-}else{
-        $mensajeria=$_POST['mensajeria'];  
 }
-$guia=$_POST['guias'];
-if($guia==""){
-        $guia='Null';
+if(isset($_POST['guias'])){
+        $guia=$_POST['mensajeria']; 
 }else{
-        $guia=$_POST['mensajeria'];  
+        $guia='Null';
 }
 $urgencia=$_POST['urgen'];
 $idioma=$_POST['idioma'];
@@ -83,7 +81,14 @@ $cp=$cp4['idcodigopostal'];
 
 $descripcion_cliente=$_POST['descripcion_cliente'];
 $otros_datos=$_POST['otros_datos'];
-$conmensajeria=$_POST['checkmensaje'];
+
+if(isset($_POST['checkmensaje'])){
+        $conmensajeria=$_POST['checkmensaje'];
+}else{
+        $conmensajeria='0';
+}
+
+
 
 $noversion=1;
 $_SESSION['noversion']=$noversion;

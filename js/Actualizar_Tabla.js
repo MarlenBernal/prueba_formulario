@@ -2,14 +2,14 @@ $(document).ready(function(){
     $("#Actualizar").click(function(){
         event.preventDefault();
 
-        cadena="orden=" + $("#Buscar").val();
+        cadena="orden=" + $("#Orden_Trabajo").val();
 
         $.ajax({
             type: "POST",
             url: "php/actualizar_tabla.php",
             data: cadena,
             success: function(res){
-                $('#Datos_Tabla').html(res);
+                $('#Tabla_Datos').html(res);
             }
         })
 

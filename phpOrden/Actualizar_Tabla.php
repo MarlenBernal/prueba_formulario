@@ -2,7 +2,7 @@
 include "conexion.php";
 $salida = "";
 
-$tablabus=$_POST["orden"];
+$tablabus=$_POST["Orden_Trabajo"];
 
 $sql="SELECT * FROM  public.ordenserviciomuestra where ordencodigo = '$tablabus'";
 $result=pg_query($conexion,$sql);
@@ -18,7 +18,7 @@ if($num_rows !=0){
         <td>".$fila['cantidad']."</td>
         <td>".$fila['lote']."</td>
         <td>".$fila['fechaenvio']."</td>
-        <td>Editar</td>
+        <td>Actualizar</td>
         <td>Eliminar</td>
         </tr>";
     }

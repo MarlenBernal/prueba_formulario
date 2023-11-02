@@ -10,7 +10,7 @@ $ordenversion=$_SESSION['ordenversion'];
 $Laboratorio=$_POST['Laboratorio'];
 $Analisis=$_POST['Analisis'];
 
-$Buscar="SELECT * FROM ordenserviciomuestranalisis where  ordencodigo='$Ordencodigo' and idanalisis= $Analisis ;";
+$Buscar="SELECT * FROM ordenserviciomuestranalisis where  muestracodigo='$muestra' and idanalisis= $Analisis ;";
 $Busca=pg_query($conexion,$Buscar);
 $numrows=pg_num_rows($Busca);
 

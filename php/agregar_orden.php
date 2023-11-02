@@ -35,7 +35,7 @@ $r1="SELECT idversion FROM representante where idrepresentante = '$representante
 $r2=pg_query($conexion,$r1);
 $r3=pg_fetch_assoc($r2);
 $r4=$r3['idversion'];
-	$_SESSION['representante']=$representante;
+$_SESSION['representante']=$representante;
 
 if($numrow==1){
 	$agregarorden="UPDATE public.ordenservicio SET

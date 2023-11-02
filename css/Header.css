@@ -3,10 +3,12 @@ header{
   position: sticky;
   top: 0;
   right: 0;
+  z-index: 99999;
+  width: 100%;
 }
 
 .container{
-  max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -40,6 +42,7 @@ header{
 .menu .Navbar ul li{
   position: relative;
   float: left;
+  list-style-type: none;
 }
 
 .menu .Navbar ul li a{

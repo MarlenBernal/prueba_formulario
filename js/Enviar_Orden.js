@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#Opciones_Envio').on('click','#Enviar_Orden',function(env){
+    $('.Orden_Botones').on('click','#Enviar_Orden',function(env){
         env.preventDefault();
         var parametros = new FormData($("#Formulario_Muetra")[0]);
         $.ajax({
