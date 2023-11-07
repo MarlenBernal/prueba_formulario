@@ -12,7 +12,7 @@ $num_rows = pg_num_rows($resultado);
 
 if($num_rows >0){
     while($fila = pg_fetch_assoc($resultado)){
-        $salida.="<option class='Opciones_Tipo' value='".$fila['representante']."'>".$fila['nombre1']." ".$fila['apellido1']."</option>";
+        $salida.="<option class='Opciones_Tipo' value='".$fila['idrepresentante']."'>".$fila['nombre1']." ".$fila['apellido1']."</option>";
     }
 }else {
     $salida.="No hay datos";

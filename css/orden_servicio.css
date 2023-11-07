@@ -342,6 +342,13 @@ tr:nth-child(even){
 
 }
 
+.Lista_Clientes{
+    width: 100%;
+    font-family: "Montserrat",sans-serif;
+}
+
+
+
 /*==============Foter==============*/
 .Footer{
     position: fixed;

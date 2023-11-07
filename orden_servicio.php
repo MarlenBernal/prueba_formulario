@@ -15,7 +15,9 @@ if($id_Usuario=="" || $id_Usuario==null){
     <title>Document</title>
     <link rel="stylesheet" href="css/Orden_Servicio.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="Librerias/css/select2.css">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="Librerias/select2.js"></script>
 </head>
 <body>
     <header>
@@ -92,8 +94,7 @@ if($id_Usuario=="" || $id_Usuario==null){
                             <label for="representante">Reprecentante:</label>
                         </div>
                         <div class="Representante">
-                            <input list="Lista_Representante" type="text" id="Orden_Representante" disabled>
-                            <datalist class="Lista_Clientes" id="Lista_Representante" name="representante"></datalist> 
+                            <Select class="Lista_Clientes" id="Lista_Representante" name="representante" disabled></Select> 
                         </div>
                     </div>
                     <div class="Orden_Nuevo">

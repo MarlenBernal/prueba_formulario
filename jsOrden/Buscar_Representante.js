@@ -1,5 +1,8 @@
 $(document).ready(function(){
     var Iniciar  = new FormData($("#Singin_Form")[0]);
+    $('#Lista_Representante').select2({
+        tags: true,
+    });
     $.ajax({
         type: "POST",
         url:"phpOrden/Buscar_Representante.php",
@@ -10,11 +13,12 @@ $(document).ready(function(){
             $('#Lista_Representante').html(responce);
         }
     })
+    var checkbox = document.getElementById('Check_Representante');
+    var select = document.getElementById('Lista_Representante');
+    checkbox.addEventListener('change', function() {
+        select.disabled = !checkbox.checked;
+    });
+
 });
 
-var checkbox = document.getElementById('Check_Representante');
-var select = document.getElementById('Orden_Representante');
-checkbox.addEventListener('change', function() {
-    select.disabled = !checkbox.checked;
-});
 

@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         cadena="orden=" + $("#Orden_Trabajo").val()+"&fecha="+$("#Fecha_Orden").val()+"&cliente="+$("#Orden_Cliente").val()
         +"&razon="+$("#Orden_Razon").val()+"&direccion="+$("#Orden_Direcciones").val()+"&correo="+$("#Orden_Correo").val()
-        +"&telefono="+$("#Orden_Telefono").val()+"&representante="+$("#Orden_Representante").val();
+        +"&telefono="+$("#Orden_Telefono").val()+"&representante="+$("#Lista_Representante").val();
 
         $.ajax({
             type: "POST",

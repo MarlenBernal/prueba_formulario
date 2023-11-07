@@ -11,16 +11,3 @@ window.onload = function(){
     document.getElementById('Fecha_Orden').value=ano+"-"+mes+"-"+dia;
 }
 
-const myInput = document.querySelector('#Orden_Cliente');
-const myDatalist = document.querySelector('#lista_Clientes');
-
-// Selecciona la primera opción
-myDatalist.options[0].selected = true;
-
-// Selecciona la siguiente opción
-myDatalist.options[0].selected = false;
-myDatalist.options[1].selected = true;
-
-// Selecciona la siguiente opción
-myDatalist.options[1].selected = false;
-myDatalist.options[2].selected = true;
