@@ -28,7 +28,7 @@ table {
   width: 100%;
   max-width: 100%;
   white-space: nowrap;
-  background-color: white;
+  background-color: rgb(171, 247, 193);
   border: 1px solid #1a2929;
 }
 td,
@@ -41,8 +41,8 @@ td {
   font-size: 12px;
 }
 thead th {
-  color: #ffffff;
-  background: #1a2929;
+  color: #161515;
+  background:rgb(43, 226, 95);
 }
 tr:nth-child(even) {
   background: #9edfd3;
@@ -95,7 +95,7 @@ tr:nth-child(even) {
   }
   tr td:nth-child(odd){
     background: #F8F8F8;
-    border-right: 1px solid #1A2929;
+    border-right: 1px solid rgba(43, 226, 95);
   }
   tr rd :nth-child(even){
     background-color: #9edfd3;

@@ -3,60 +3,95 @@
   margin: 0;
   padding: 0;
 }
-.Analisis_Contenedor {
-  width: 700px;
+.analisis{
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
-@media (max-width:763px){
-  .Analisis_Contenedor{
-    width: 100%;
-  }
-}
-.Analisis_Formulario {
+.analisis_contenedor{
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  padding: 50px;
 }
-.Analisis_titulo {
+.analisi_form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+.analisis_titulo{
   width: 100%;
   text-align: center;
-  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.Analisis_laboratorios {
+.analisis_titulo h1{
+  font-size: 2.5em;
+}
+.linea_titulo{
+  width: 100%;
+  height: 8px;
+  background-color: rgb(43, 226, 67);
+  border-radius: 25px;
+}
+.analisis_datos{
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
-.Analisis_laboratorios input {
+select{
   width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0 10px;
+  border: none;
+  background-color: rgb(43, 226, 95);
 }
-.Analisis_analisis {
+.analisis_boton{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  gap: 10px;
+  place-items: center;
+}
+.analisis_boton input{
+  width: 250px;
+  height: 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(3, 237, 93);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.analisis_boton input:hover{
+  transform: translateY(-8px);
+}
+.analisis_boton input :active{
+  transform: translateY(2px);
+  transition: 0.3s;
 }
 
-.Analisis_analisis input {
-  width: 250px;
+h2 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 30px 0;
 }
-.Analisis_boton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-.Analisis_tabla {
-  width: 100%;
-  margin: 40px 40px 20px;
+.analisis_tabla {
+  margin: 80px 70px 70px;
   box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
 }
 table {
@@ -68,7 +103,7 @@ table {
   width: 100%;
   max-width: 100%;
   white-space: nowrap;
-  background-color: white;
+  background-color: rgb(171, 247, 193);
   border: 1px solid #1a2929;
 }
 td,
@@ -81,8 +116,8 @@ td {
   font-size: 12px;
 }
 thead th {
-  color: #ffffff;
-  background: #1a2929;
+  color: black;
+  background:rgb(43, 226, 95);
 }
 tr:nth-child(even) {
   background: #9edfd3;
@@ -97,20 +132,20 @@ tr:nth-child(even) {
   thead th {
     display: block;
   }
-  thead th:last-child {
+  thead th:last-child{
     border-bottom: none;
   }
-  thead {
+  thead{
     float: left;
   }
-  tbody {
+  tbody{
     width: auto;
     position: relative;
     overflow-x: auto;
   }
   td,
-  th {
-    padding: 20px 0.625em 0.625em 0.625em;
+  th{
+    padding: 20px .625em .625em .625em;
     height: 60px;
     vertical-align: middle;
     box-sizing: border-box;
@@ -120,41 +155,28 @@ tr:nth-child(even) {
     font-size: 13px;
     text-overflow: ellipsis;
   }
-  thead th {
-    text-align: left;
+  thead th{
+    text-align:left;
     border-bottom: 1px solid #f7f7f9;
   }
-  tbody tr {
+  tbody tr{
     display: table-cell;
   }
-  tbody tr:nth-child(odd) {
+  tbody tr:nth-child(odd){
     background: transparent;
   }
-  tr:nth-child(even) {
+  tr:nth-child(even){
     background: transparent;
   }
-  tr td:nth-child(odd) {
-    background: #f8f8f8;
-    border-right: 1px solid #1a2929;
+  tr td:nth-child(odd){
+    background: #F8F8F8;
+    border-right: 1px solid rgba(43, 226, 95);
   }
-  tr rd :nth-child(even) {
+  tr rd :nth-child(even){
     background-color: #9edfd3;
     border-right: 1px solid #1a2929;
   }
-  tbody td {
-    display: block;
-    text-align: center;
+  tbody td{
+display:block;
+text-align: center;
   }
-}
-.Analisis_enviar{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.Analisis_enviar input{
-  width: 250px;
-}
-

@@ -1,60 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/analisis_solicitados.css">
-    <title>Analisis _solicitados</title>
+    <title>Analisis solicitado</title>
 </head>
-
 <body>
-    <section class="Analisis">
-        <div class="Analisis_Contenedor">
-            <form class="Analisis_Formulario">
-                <div class="Analisis_titulo">
-                    <h1>ANÁLISIS SOLICITADOS</h1>
-                </div>
-                <div class="Analisis_laboratorios">
-                    <h1>Laboratorios</h1>
-                    <select name="" id="">
 
-                    </select>
+    <section class="analisis">
+        <div class="analisis_contenedor">
+            <form class="analisi_form">
+                <div class="analisis_titulo">
+                    <h1>Analisis solicitado</h1>
+                    <div class="linea_titulo"></div>
                 </div>
 
-                <div class="Analisis_analisis">
-                    <h1>Análisis</h1>
-                    <select name="" id=""></select>
-                    <div class="Analisis_boton">
-                    <input type="submit" value="Agregar análisis">
+                <div class="analisis_datos">
+                    <label for="lab">Laboratorio:</label>
+                    <select></select>
                 </div>
+
+                <div class="analisis_datos">
+                    <label for="analisis">Analisis:</label>
+                   <select name="" id=""></select>
                 </div>
-                <div class="Analisis_tabla">
+                <div class="analisis_boton">
+                    <input type="submit" value="Agregar analisis">
+                    <input type="submit" value="Actualizar tabla">
+                </div>
+
+                <div class="analisis_tabla">
                     <table>
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>CLAVE</th>
-                                <th>ANALISIS</th>
-                                <th>NORMA</th>
-                                <th>UNIDAD</th>
-                                <th>LAB</th>
-                                <th>PAS</th>
-                                <th>EXI</th>
-
+                                <th>Clave</th>
+                                <th>Anàlisis</th>
+                                <th>Norma</th>
+                                <th>Unidad</th>
+                                <th>Laboratorio</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            
-                        </tbody>
+                        <tbody></tbody>
                     </table>
                 </div>
-                <div class="Analisis_enviar">
-                    <input type="submit" value="Enviar análisis">
+                <div class="analisis_boton">
+                    <input type="button" value="Control Cliente">
+                    <input type="button" value="Cancelar Anànalisis">
                 </div>
+
             </form>
         </div>
     </section>
+    
 </body>
-
 </html>
