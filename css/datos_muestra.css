@@ -1,140 +1,125 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  margin: 0;
-  overflow: 100%;
-}
-.container {
+.dat_muestra {
   width: 100%;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.formu {
-  width: 700px;
-  background-color: rgb(203, 216, 212);
-  border-radius: 20px;
+.dat_muestra_contenedor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.dat_muestra_form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+.dat_muestra_titulo {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dat_muestra_titulo h1 {
+  font-size: 2.5em;
+}
+.linea_titulo {
+  width: 100%;
+  height: 8px;
+  background-color: rgb(43, 226, 67);
+  border-radius: 25px;
+}
+.dat_datos {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 35px;
 }
-.mensajer {
-  width: 60%;
-}
-.no_guia {
+.dat_datos input {
   width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0 10px;
+  border: none;
+  background-color: rgb(43, 226, 95);
 }
-.noguia {
-  width: 80%;
-}
-.urgen {
-  width: 100%;
-}
-.urg {
-  width: 25%;
-}
-.idiom {
-  width: 30%;
-}
-.mues {
-  width: 100%;
-}
-.muest {
-  width: 75%;
+h2 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 30px 0;
 }
 
-.canuni {
+.dat_procedencia_titulo {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dat_procedencia_titulo h1 {
+  font-size: 2.5em;
+}
+.procedencia_dat {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
 }
-.fecha {
+.procedencia_dat input {
   width: 100%;
+  height: 25px;
+  border-radius: 25px;
+  padding: 0 10px;
+  border: none;
+  background-color: rgb(43, 226, 95);
 }
-.fechm {
-  width: 24%;
+.botones{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    width: 100%;
+    gap: 10px;
+    place-items: center;
+    margin-top: 20px;
+  }
+  .botones input{
+    width: 250px;
+    height: 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(3, 237, 93);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+.botones input:hover{
+    transform: translateY(-8px);
 }
-.feche {
-  width: 23%;
-}
-.fecha1 {
-  width: 100%;
-}
-.fechc {
-  width: 22%;
-}
-.fechem {
-  width: 21%;
-}
-.lotee {
-  width: 100%;
-}
-.lot {
-  width: 90%;
-}
-.itti {
-  width: 100%;
-  justify-content: space-between;
-}
-.ite {
-  width: 43%;
-}
-.ti {
-  width: 43%;
-}
-.proced {
-  width: 100%;
-}
-.proce {
-  width: 65%;
-}
-.nomb {
-  width: 100%;
-}
-.nom {
-  width: 87%;
+.botones input :active{
+    transform: translateY(2px);
+    transition: 0.3s;
 }
 
-.municip {
-  width: 100%;
-}
-.muni {
-  width: 78%;
-}
-.estad {
-  width: 100%;
-}
-.esta {
-  width: 35%;
-}
-.cp {
-  width: 34%;
-}
-.des_cliente {
-  width: 100%;
-}
-.desc_cliente {
-  width: 100%;
-}
-.otros_dat {
-  width: 100%;
-}
-.otros_dato {
-  width: 100%;
-}
-.motiv_cancel {
-  width: 100%;
-}
-.mot_cancel {
-  width: 100%;
-}
-.modific_can {
-  width: 100%;
-}
-.modific_fallo {
-  width: 100%;
+.Chek{
+    width: 10%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }

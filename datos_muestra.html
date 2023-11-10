@@ -1,205 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texcoco datos de la muestra</title>
-    <link rel="stylesheet" href="/css/datos_muestra.css">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <link rel="stylesheet" href="css/datos_muestra.css">
+    <title>Datos Muestra</title>
 </head>
 
 <body>
-    <div class="container">
-        <form class="formu">
-            <div class="men">
-                <input type="checkbox" name="mensaje" id="mensaje">
-                <label for="mensaje">MENSAJERIA</label>
-                <input type="text" class="mensajer">
-                <button class="boton1">buscar</button>
-                <button class="boton2">nuevo</button>
-            </div>
+    <section class="dat_muestra">
+        <div class="dat_muestra_contenedor">
+            <form class="dat_muestra_form">
+                <div class="dat_muestra_titulo">
+                    <h1>Datos de Muestra</h1>
+                    <div class="linea_titulo"></div>
+                </div>
 
-            <div class="no_guia">
-                <label for="guias">No.DE GUIA(S):</label>
-                <input id="guias" name="guias" class=noguia type="text">
-            </div>
+                <div class="dat_datos">
+                    <div class="dat_dato">
+                        <div class="Chek">
+                            <input type="checkbox">
+                            <label for="dat">Mensajeria:</label>
+                        </div>
+                        <input type="text">
+                    </div>
 
-            <div class="urgen">
-                <label for="urgencia">URGENCIA:</label>
-                <label for="urg"></label>
-                <label type="number" class="urgencia" for="urgen">
-                    <select name="urgen" id="urgen" class="urg">
-                        <option value="">selelcciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                    </select>
-                </label>
-                <button class="boton3">buscar</button>
-                <button class="boton4">nuevo</button>
-                <label for="idioma">IDIOMA:</label>
-                <label for="idioma" type="number">
-                    <select name="idioma" class="idiom" id="idioma">
-                        <option value="">selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                </label>
-            </div>
+                    <div class="datos">
+                        <label for="no_guia">No.Guìa:</label>
+                        <input type="text">
+                    </div>
 
-            <div class="mues">
-                <label for="muestra">MUESTRA:</label>
-                <label for="muestra" type="number">
-                    <select name="muestra" class="muest" id="muestra">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                </label>
-                <button class="boton6">nuevo</button>
-            </div>
+                    <div class="datos1">
+                        <div class="dat">
+                            <label for="urg">Urgencia:</label>
+                            <input type="text">
+                        </div>
+                        <div class="dat">
+                            <label for="idiom">Idioma:</label>
+                            <input type="text">
+                        </div>
+                    </div>
 
-            <div class="canuni">
-                <label for="cantidad">CANTIDAD:</label>
-                <input id="cantidad" type="text" name="cantidad" class="cant">
-                <label for="unidad">UNIDAD</label>
-                <label for="unidad" type="number" class="cant">
-                    <select name="unidad" class="unid" id="unidad">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                </label>
-                <button class="boton7">buscar</button>
-                <button class="boton8">nuevo</button>
-            </div>
+                    <div class="dat">
+                        <label for="muest">Muestra:</label>
+                        <input type="text">
+                    </div>
 
-            <div class="fecha">
-                <label for="fech_muestreo">FECHA DE MUESTREO:</label>
-                <input type="text" class="fechm">
+                    <div class="datos_dat">
+                        <div class="dato">
+                            <label for="cant">Cantidad:</label>
+                            <input type="text">
+                        </div>
+                        <div class="dato">
+                            <label for="uni">Unidad:</label>
+                            <input type="text">
+                        </div>
+                    </div>
 
-                <label for="fech_envio">FERCHA DE ENVIO:</label>
-                <input type="text" class="feche">
-            </div>
-            <div class="fecha1">
-                <label for="fech_caducidad">FECHA DE CADUCIDAD:</label>
-                <input type="text" class="fechc">
+                    <div class="dato_datos">
+                        <div class="dattos">
+                            <label for="fech_m">Fecha de muestreo:</label>
+                            <input type="text">
+                        </div>
+                        <div class="dattos">
+                            <label for="fech_e">Fecha de envio:</label>
+                            <input type="text">
+                        </div>
+                    </div>
 
-                <label for="fech_empaque">FECHA DE EMPAQUE:</label>
-                <input type="text" class="fechem">
-            </div>
-            <div class="lotee">
-                <label for="lote">LOTE:</label>
-                <input type="text" class="lot">
-            </div>
+                    <div class="dat_datos1">
+                        <div class="datoos">
+                            <label for="fech_c">Fecha de caducidad:</label>
+                            <input type="text">
+                        </div>
+                        <div class="datoos">
+                            <label for="fech_em">Fecha de empaquetado:</label>
+                            <input type="text">
+                        </div>
+                    </div>
 
-            <div class="itti">
-                <label for="item">ITEM:</label>
-                <input type="text" class="ite">
+                    <div class="dat">
+                        <label for="lot">Lote:</label>
+                        <input type="text">
+                    </div>
 
-                <label for="tif">TIF</label>
-                <input type="text" class="ti">
-            </div>
+                    <div class="datoss">
+                        <div class="d1">
+                            <label for="item">ITEM:</label>
+                            <input type="text">
+                        </div>
+                        <div class="d1">
+                            <label for="tif">TIF:</label>
+                            <input type="text">
+                        </div>
+                    </div>
 
-            <div>
-                <button>flecha</button>
-                <label for="proced_muestra">PROCEDENCIA DE LA MUESTRA</label>
-            </div>
+                </div>
 
-            <div class="proced">
-                <label for="procedencia">PROCEDENCIA:</label>
-                <label type="number">
-                    <select name="procedencia" class="proce" id="procedencia">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>buscar</button>
-                    <button>enviar</button>
-            </div>
 
-            <div class="nomb">
-                <label for="nombre">NOMBRE:</label>
-                <input type="text" class="nom">
-            </div>
+                <div class="dat_procedencia_titulo">
+                    <h1>Procedencia de la Muestra</h1>
+                    <div class="linea_titulo"></div>
 
-            <div class="municip">
-                <label for="municipio">MUNICIPIO</label>
-                <label type="text">
-                    <select name="municipio" class="muni" id="municipio">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>buscar</button>
-            </div>
+                    <div class="procedencia_dat">
+                        <label for="proced">Procedencia:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="nom">Nombre:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="mun">Municipio:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <div class="procedencia_dat">
+                            <label for="est">Estado:</label>
+                            <input type="text">
+                        </div>
+                        <div class="procedencia_dat">
+                            <label for="cp">CP:</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="decrip">Descripcion del cliente:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="otros_dat">Otros datos:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="motiv">Motivo de cancelacion:</label>
+                        <input type="text">
+                    </div>
+                    <div class="procedencia_dat">
+                        <label for="modif">Modificacion o fallos:</label>
+                        <input type="text">
+                    </div>
+                    <div class="botones">
+                        <input type="submit" value="Registrar muestra">
+                        <input type="submit" value="Cancelar muestra">
+                    </div>
 
-            <div class="estad">
-                <label for="estado">ESTADO</label>
-                <label type="number">
-                    <select name="estado" class="esta" id="estado">
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>buscar</button>
-                </label>
-                <label for="cop">C.P.</label>
-                <label type="number">
-                    <select name="cop" class="cp" id="cop">
-                        <option value="">Selecciona una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                    </select>
-                    <button>buscar</button>
-                </label>
-            </div>
+                </div>
 
-            <div class="des_cliente">
-                <label for="descrip_cliente">DESCRIPCION DEL CLIENTE</label>
-                <input type="text" class="desc_cliente">
-            </div>
-
-            <div class="otros_dat">
-                <button>flecha</button>
-                <label for="otros_datos">OTROS DATOS</label>
-                <input for="otros_datos" class="otros_dato" type="text" name="otros_datos">
-            </div>
-
-            <div class="motiv_cancel">
-                <label for="motiv_cancel">MOTIVO DE CANCELACION</label>
-                <input type="text" class="mot_cancel">
-            </div>
-
-            <div class="modific_can">
-                <label for="modific">MODIFICACION O FALLO</label>
-                <input type="text" class="modific_fallo">
-            </div>
-
-            <div>
-                <button>flecha</button>
-                <label for="usu_muest">USUARIO DE MUESTRA</label>
-            </div>
-            <div>
-                <label for="regis_por">REGISTRADO POR</label>
-                <label type="number">
-                    <select name="regis_por" class="regis" id="regis_por">
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <button>ACEPTAR</button>
-                    <button>CANCELAR</button>
-                    <button>LIMPIAR</button>
-                    <LABEL>REGISTRO</LABEL>
-                </label>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
