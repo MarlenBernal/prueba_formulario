@@ -1,8 +1,6 @@
 $(document).ready(function(){
     var Iniciar  = new FormData($("#Singin_Form")[0]);
-    $('#Lista_Representante').select2({
-        tags: true,
-    });
+    $('#Lista_Representante').select2();
     $.ajax({
         type: "POST",
         url:"phpOrden/Buscar_Representante.php",

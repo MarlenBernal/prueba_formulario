@@ -20,72 +20,63 @@ if($id_Usuario=="" || $id_Usuario==null){
     <script src="Librerias/select2.js"></script>
 </head>
 <body>
-    <header>
-        <div class="back">
-            <div class="menu container">
-                <a href="#" class="logo"><img class="logo_gis" src="img/Gsmall.webp" alt=""></a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="img/menuahambuegesa.webp" alt="" class="menu-icono">
-                </label>
-                <nav class="Navbar">
-                    <ul>
-                        <li><a href="https://gisenalabs.com.mx/">Conocenos</a></li>
-                        <li><a href="Orden_Servicio.php">Nuevo Análisis</a></li>
-                        <li><a href="Mis_Analisis.php">Mis Análisis</a></li>
-                        <li><a href="php/Cerrar.php">Salir</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+    <header class="header">
+        <a href="#" class="name"><img class="logo_gis" src="img/Gsmall.webp" alt=""></a>
+        <input type="checkbox" id="check">
+        <label for="check" class="menu">
+            <i class="bx bx-menu" id="icon-menu"><img class="bx" src="img/menuahambuegesa.webp"></i>
+            <i class="bx bx-x" id="close-menu"><img class="bx" src="img/menuahambuegesa.webp"></i>
+        </label>
+        <nav class="navbar">
+            <a href="https://gisenalabs.com.mx/">Conocenos</a>
+            <a href="Orden_Servicio.php">Nuevo Análisis</a>
+            <a href="Mis_Analisis.php">Mis Análisis</a>
+            <a href="php/Cerrar.php">Salir</a>
+        </nav>
+
     </header>
 
     <!--=============================================-->
 
     <Section class="Orden">
         <div class="Orden_Contenedor">
-            <form class="Ornden_Form">
+            <form class="Ornden_Form" id="Orden_Form">
                 <div class="Orden_Titulo">
                     <h1>Orden de Servicio</h1>
                     <div class="Linea_Titulo"></div>
                 </div>
                 <div class="Orden_Datos">
+                    <div class="Datos_Alerta_Incompletos"> 
+                        <label for="DatosIncompletos" class="Alerta_Datos" id="Alerta_Datos"></label>
+                    </div>
                     <div class="Orden_Numero">
                         <div class="Orden_NumeroSercicio">
                             <label for="No.Servicio">Número de orden de servicio:</label>
-                            <input type="text" value="<?php echo $_SESSION['ordentrabajo']; ?>" id="Orden_Trabajo" disabled>
+                            <input type="text" value="<?php echo $_SESSION['ordentrabajo']; ?>" id="Orden_Trabajo" name="Orden_Trabajo" readonly>
                         </div>
                         <div class="Orden_NumeroSercicio">
                             <label for="No.Servicio">Fecha:</label>
-                            <input type="date" id="Fecha_Orden" disabled>
+                            <input type="date" id="Fecha_Orden" name="Orden_Fecha" readonly>
                         </div>
                     </div>
                     <div class="Orden_Cliente">
                         <div class="OrdenDireccion">
-                            <label for="direccion">Cliente:</label>
-                            <input type="text" id="Orden_Cliente">
-                            <datalist class="Lista_Clientes" id="lista_Clientes"></datalist>
-                        </div>
-                        <div class="OrdenDireccion">
-                            <label for="direccion">Razón social:</label>
-                            <input type="text" id="Orden_Razon">
+                            <label for="direccion">Razon Social:</label>
+                            <select class="Lista_Clientes" id="lista_Clientes" name="Orden_Clientes"></select>
                         </div>
                         <div class="OrdenDireccion">
                             <label for="direccion">Dirección:</label>
-                            <input type="text" id="Orden_Direcciones">
-                            <datalist class="Lista_Clientes" id="lista_Direccion"></datalist>                         
+                            <select class="Lista_Clientes" id="lista_Direccion" name="Orden_Direccion"></select>                         
                         </div>
                     </div>
                     <div class="Orden_Contacto">
                         <div class="Orden_Tel">
                             <label for="contacto">Telefono</label>
-                            <input type="text" id="Orden_Telefono">
-                            <datalist class="Lista_Clientes" id="lista_Telefono"></datalist>                         
+                            <select class="Lista_Clientes" id="lista_Telefono" name="Orden_Telefono"></select>                         
                         </div>
                         <div class="Orden_Tel">
                             <label for="contacto">Correo</label>
-                            <input type="text" id="Orden_Correo">
-                            <datalist class="Lista_Clientes" id="lista_Correo"></datalist> 
+                            <select class="Lista_Clientes" id="lista_Correo" name="Orden_Correo"></select> 
                         </div>
                     </div>
                     <div class="Orden_Representante">
@@ -94,12 +85,12 @@ if($id_Usuario=="" || $id_Usuario==null){
                             <label for="representante">Reprecentante:</label>
                         </div>
                         <div class="Representante">
-                            <Select class="Lista_Clientes" id="Lista_Representante" name="representante" disabled></Select> 
+                            <Select class="Lista_Clientes" id="Lista_Representante" name="Orden_Representante" disabled></Select> 
                         </div>
                     </div>
                     <div class="Orden_Nuevo">
-                        <input type="button" value="Agregar análisis" id="Enviar">
-                        <input type="button" value="Actualizar tabla" id="Actualizar">
+                        <input type="button" value="Agregar análisis" id="Agregar_Orden">
+                        <input type="button" value="Actualizar tabla" id="Actualizar_Tabla">
                     </div>
                     <div class="Orden_Tabla">
                         <table>
@@ -122,10 +113,44 @@ if($id_Usuario=="" || $id_Usuario==null){
                     </div>
                     <div class="Orden_Botones">
                         <input type="button" value="Enviar" id="Enviar_Orden">
-                        <input type="button" value="Calncelar" onclick="Cancelar_Muestra();">
+                        <input type="button" value="Calncelar" id="Canacelar_Muestra">
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="Alerta" id="Alerta_Cancelar">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >! Alerta ¡</h2>
+                    <label id="Label_Alerta_Cancelar" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Aceptar" id="Cancelar_Orden">
+                    <input type="button" value="Cancelar" id="Continuar_Orden">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Regresar">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >! Exito ¡</h2>
+                    <label id="Label_Alerta_Inicio" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Regresar" id="Inicio_Orden">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Nuevo">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2 id="Titulo_Alerta" >¿Nueva Orden?</h2>
+                    <label id="Label_Alerta_Nueva" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Nueva Orden" id="Nuevo_Orden">
+                </div>
+            </div>
         </div>
     </Section>
 
@@ -148,9 +173,9 @@ if($id_Usuario=="" || $id_Usuario==null){
 <script src="jsOrden/Buscar_Telefono.js"></script>
 <script src="jsOrden/Buscar_Correo.js"></script>
 <script src="jsOrden/Buscar_Representante.js"></script>
-<script src="js/Cancelar_Muestra.js"></script>
-<script src="js/Enviar_Orden.js"></script>
-<script src="js/agregar_orden.js"></script>
-<script src="js/Actualizar_Tabla.js"></script>
+<script src="jsOrden/Agregar_Orden.js"></script>
+<script src="jsOrden/Alerta_Cancelar.js"></script>
+<script src="jsOrden/Nueva_Orden.js"></script>
+<script src="jsOrden/Actualizar_Tabla.js"></script>
 
 <?php  }  ?>

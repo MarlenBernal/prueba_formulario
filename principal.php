@@ -28,7 +28,7 @@ if($id_Usuario=="" || $id_Usuario==null){
                 <nav class="Navbar">
                     <ul>
                         <li><a href="https://gisenalabs.com.mx/">Conocenos</a></li>
-                        <li><a id="Nuevo_Analisis" href="#" onclick="Hacer_muestra();">Nuevo Análisis</a></li>
+                        <li><a href="Orden_Servicio.php">Nuevo Análisis</a></li>
                         <li><a href="Mis_Analisis.php">Mis Análisis</a></li>
                         <li><a href="php/Cerrar.php">Salir</a></li>
                     </ul>
@@ -50,12 +50,23 @@ if($id_Usuario=="" || $id_Usuario==null){
                 <div class="Menu_Opciones Menu_Nuevo">
                     <h2>Nuevo Análisis</h2>
                     <img src="img/Ilustracion1.webp" alt="">
-                    <input type="button" value="Nuevo Análisis" id="Nuevo_Analisis" onclick="Hacer_muestra();">
+                    <input type="button" value="Nuevo Análisis" id="Nuevo_Analisis">
                 </div>
                 <div class="Menu_Opciones Menu_Mis">
                     <h2>Mis Análisis</h2>
                     <img src="img/Ilustracion2.webp" alt="">
                     <input type="button" value="Mis Análisis" id="Mis_Analsis">
+                </div>
+            </div>
+        </div>
+        <div class="Alerta" id="Alerta_Analisis">
+            <div class="Alerta_Contenedor">
+                <div class="Alerta_Titulo">
+                    <h2>! Upss... ¡</h2>
+                    <label id="Label_Alerta_Secion" for="Registro"></label>
+                </div>
+                <div class="Alerta_Boton">
+                    <input type="button" value="Aceptar" id="Alerta_btn_Secion">
                 </div>
             </div>
         </div>
@@ -75,5 +86,6 @@ if($id_Usuario=="" || $id_Usuario==null){
 
 
 <script src="js/Direccionar.js"></script>
-<script src="js/Orden_Muetra.js"></script>
+<script src="js/Nuevo_Analisis.js"></script>
+
 <?php } ?>

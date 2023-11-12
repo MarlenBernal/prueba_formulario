@@ -3,8 +3,6 @@ include "../php/conexion.php";
 $salida = "";
 session_start();
 
-$Ordenservicio=$_SESSION['ordentrabajo'];
-$tablabus=$_POST["orden"];
 $muestracodigo=$_SESSION['claveidentificacion'];
 
 $sql="SELECT abreviatura,descripcion_espanol,analisis.idnormativa AS idnormativa , ordenserviciomuestranalisis.idlaboratorio as idlaboratorio, analisis.idunidadmed as idunidadmed  FROM  ordenserviciomuestranalisis INNER JOIN analisis on  ordenserviciomuestranalisis.idanalisis=analisis.idanalisis where muestracodigo = '$muestracodigo'";
@@ -22,10 +20,11 @@ if($num_rows !=0){
         <td>".$fila['idnormativa']."</td>
         <td>".$fila['idunidadmed']."</td>
         <td>".$fila['idlaboratorio']."</td>
+        <td>Eliminar</td>
         </tr>";
     }
 }else {
-    $salida="No hay analizis";
+    $salida="<td>Sin Analisis</td>";
 }
 
 echo $salida;

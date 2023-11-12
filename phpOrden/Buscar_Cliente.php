@@ -1,18 +1,23 @@
+
 <?php
+include "../php/conexion.php";
 
-require '../php/conexion.php';
+$salida = "<option class='Opciones_Tipo' value='0'>Seleccionar Representante</option>";
+
+$querry = "SELECT * FROM public.cliente LIMIT 10";
 
 
-$campo = $_POST["campo"];
+$resultado = pg_query($conexion,$querry);
+$num_rows = pg_num_rows($resultado);
 
-$sql = "SELECT * FROM public.cliente where razonsocial ILIKE '%$campo%' LIMIT 20 ";
-$query = pg_query($conexion,$sql);
-
-$htmli = "";
-
-while ($row = pg_fetch_array($query)) {
-	$htmli .= "<option value=".$row["idcliente"]." onclick=\"mostrar('" . $row["razonsocial"] . "')\">" . $row["razonsocial"] ."</option>";
+if($num_rows >0){
+    while($fila = pg_fetch_assoc($resultado)){
+        $salida.="<option value='".$fila["idcliente"]."'>" . $fila["razonsocial"] ."</option>";
+    }
+}else {
+    $salida.="No hay datos";
 }
 
-echo json_encode($htmli, JSON_UNESCAPED_UNICODE);
+echo $salida;
+?>
 

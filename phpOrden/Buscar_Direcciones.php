@@ -3,15 +3,17 @@
 require '../php/conexion.php';
 
 
-$campo = $_POST["campo"];
+$campo = $_POST["lista_Clientes"];
 
-$sql = "SELECT MAX(idversion) version_direc,domicilio FROM public.cliente where razonsocial ILIKE '%$campo%' GROUP BY domicilio  LIMIT 10 ";
+$sql = "SELECT MAX(idversion) version_direc,domicilio FROM public.cliente where idcliente = '$campo'  GROUP BY domicilio  LIMIT 10 ";
 $query = pg_query($conexion,$sql);
 
 $html = "";
 
-while ($row = pg_fetch_array($query)) {
-	$html .= "<option onclick=\"mostrarDireccion('" . $row["domicilio"] . "')\">" . $row["domicilio"] ."</option>";
+while ($row = pg_fetch_assoc($query)) {
+	$html .= "<option values='".$row["domicilio"]."'>".$row["domicilio"]."</option>";
 }
 
-echo json_encode($html, JSON_UNESCAPED_UNICODE);
+echo $html;
+
+?>
